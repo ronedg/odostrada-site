@@ -20,7 +20,7 @@
         }
 
         .legal-box::-webkit-scrollbar {
-            width: 4px;
+            width: 6px;
         }
 
         .legal-box::-webkit-scrollbar-thumb {
@@ -34,66 +34,41 @@
 
     <nav class="fixed w-full z-50 border-b border-white/10 glass">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div
-                    class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-extrabold text-white">
-                    O</div>
+            <div class="flex items-center gap-2 text-white">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-extrabold">O</div>
                 <span class="text-xl font-bold tracking-tight">odostrada</span>
             </div>
             <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
                 <a href="#features" class="hover:text-white transition">Features</a>
                 <a href="#privacy" class="hover:text-white transition">Privacy</a>
-                <a href="#legal" class="hover:text-white transition">Legal</a>
+                <a href="#legal" class="hover:text-white transition text-indigo-400">Legal & EULA</a>
             </div>
-            <a href="#"
+            <a href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_ID"
                 class="bg-white text-slate-950 px-4 py-2 rounded-full text-sm font-bold hover:bg-indigo-50 transition">Download</a>
         </div>
     </nav>
 
-    <header class="pt-40 pb-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1
-                class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 bg-gradient-to-b from-white to-slate-500 bg-clip-text text-transparent leading-tight">
-                Privacy-First Mileage.<br>No Tracking Required.
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Accuracy without the intrusion. Odostrada uses <strong>Anchor & Segment</strong> logic to give you tax
-                logs without ever following your movement.
-            </p>
-        </div>
+    <header class="pt-40 pb-20 px-6 max-w-4xl mx-auto text-center">
+        <h1
+            class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 bg-gradient-to-b from-white to-slate-500 bg-clip-text text-transparent leading-tight">
+            Privacy-First Mileage.<br>No Tracking Required.
+        </h1>
+        <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10">
+            Ditch the battery-draining GPS. Odostrada uses <strong>Anchor & Segment</strong> logic to provide 100%
+            accurate tax logs without ever monitoring your movement.
+        </p>
     </header>
 
-    <section id="features" class="py-24 bg-slate-900/30 border-y border-white/5">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
-            <div>
-                <h3 class="text-xl font-bold mb-4 text-indigo-400">Anchors, Not Trips</h3>
-                <p class="text-slate-400">Log your odometer at stop points. Your location is only accessed at that
-                    precise moment. Zero background tracking.</p>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4 text-indigo-400">Natural Reconciliation</h3>
-                <p class="text-slate-400">Split segments into multiple trips. Reconcile your business day in seconds
-                    with total IRS-ready accuracy.</p>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4 text-indigo-400">Local Only</h3>
-                <p class="text-slate-400">No accounts. No cloud. All data stays in your local SQLite database. You own
-                    the logs, we never see them.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="privacy" class="py-24 px-6">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-white">Privacy Policy</h2>
-            <div class="space-y-6 text-slate-400 leading-relaxed">
-                <p><strong>Data Sovereignty:</strong> Odostrada does not maintain accounts or operate central servers.
-                    All odometer images and logs are stored exclusively on your device.</p>
-                <p><strong>Location Processing:</strong> GPS is only accessed when you manually create an "Anchor". No
-                    background tracking or movement monitoring is performed.</p>
-                <p><strong>Data Deletion:</strong> You have total control. To delete all data, clear the App's storage
-                    in your system settings or uninstall the application.</p>
-            </div>
+    <section id="privacy" class="py-24 px-6 max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-white">Privacy Policy</h2>
+        <div class="space-y-6 text-slate-400 leading-relaxed border-l-2 border-indigo-500/30 pl-6">
+            <p><strong>Data Minimization:</strong> We adhere to a strict policy of data minimization. The App is
+                architected to ensure that no Personal Identifiable Information (PII), location coordinates, or images
+                are ever transmitted to the Company or any third-party cloud providers.</p>
+            <p><strong>Local Processing:</strong> All sensor data and odometer readings are processed and stored
+                exclusively in a private SQLite database on your device. We have zero technical access to your logs.</p>
+            <p><strong>GPS Usage:</strong> Location access is "On-Demand" only to establish mileage Anchors. We do not
+                track your movement in the background.</p>
         </div>
     </section>
 
@@ -101,25 +76,39 @@
         <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold mb-8 text-white">End User License Agreement</h2>
             <div
-                class="h-80 overflow-y-auto p-8 glass border border-white/10 rounded-2xl text-sm text-slate-500 leading-relaxed legal-box">
-                <p class="mb-4 font-bold text-slate-300">1. NATURE OF SERVICE</p>
-                <p class="mb-6">Odostrada is a documentation tool. It is NOT tax advice. You are responsible for
-                    ensuring logs meet tax authority requirements for contemporaneous record-keeping.</p>
+                class="h-96 overflow-y-auto p-8 glass border border-white/10 rounded-2xl text-sm text-slate-500 leading-relaxed legal-box">
 
-                <p class="mb-4 font-bold text-slate-300">2. LIMITATION OF LIABILITY</p>
-                <p class="mb-6">WE ARE NOT LIABLE FOR DATA LOSS. Because this is a local-only app, if your device is
-                    lost or damaged, we cannot recover your data. You are responsible for regular exports.</p>
+                <p class="mb-2 font-bold text-slate-300">1. NO TAX OR LEGAL ADVICE</p>
+                <p class="mb-6">Odostrada is a record-keeping utility. [Your LLC Name] does not provide tax, legal, or
+                    accounting advice. You are solely responsible for ensuring logs meet IRS requirements. Consult with
+                    a CPA before filing.</p>
 
-                <p class="mb-4 font-bold text-slate-300">3. ACCURACY</p>
-                <p class="mb-6">OCR technology can fail. Users must verify every odometer reading. The Company is not
-                    responsible for errors in mileage calculation or rejected tax deductions.</p>
+                <p class="mb-2 font-bold text-slate-300">2. NO GUARANTEE OF ACCEPTANCE</p>
+                <p class="mb-6">We make no guarantee that logs generated by the App will be accepted during a government
+                    audit. The burden of verifying records rests solely with the User.</p>
 
-                <p class="mb-4 font-bold text-slate-300 text-xs">Full legal entity: Mana Kitchen LLC</p>
+                <p class="mb-2 font-bold text-slate-300 uppercase text-indigo-400/80">3. Data Sovereignty &
+                    Irrecoverability</p>
+                <p class="mb-6">Because we do not possess your data (see Privacy Policy: Data Minimization), we cannot
+                    fulfill requests for data recovery. If your device is lost or the local database is corrupted, your
+                    logs are irrecoverable by [Your LLC Name].</p>
+
+                <p class="mb-2 font-bold text-slate-300">4. BACKUP RESPONSIBILITY</p>
+                <p class="mb-6">Users are responsible for regular exports (CSV/Backups). Even with Pro-Tier reminders,
+                    the Company is not liable for data loss due to hardware failure or app uninstallation.</p>
+
+                <p class="mb-2 font-bold text-slate-300">5. OCR VERIFICATION</p>
+                <p class="mb-6 italic">OCR technology can fail. Users MUST manually verify every odometer reading entry.
+                    We are not liable for calculation errors resulting from unverified data.</p>
+
+                <p class="mt-8 pt-4 border-t border-white/5 text-slate-600 text-[10px] uppercase tracking-tighter">
+                    Legal Entity: Mana Kitchen LLC &bull;
+                </p>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-slate-600 text-xs uppercase tracking-widest">
+    <footer class="py-12 text-center text-slate-600 text-[10px] uppercase tracking-[0.2em]">
         <p>&copy; 2026 Mana Kitchen LLC. All rights reserved.</p>
     </footer>
 
