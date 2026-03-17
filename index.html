@@ -16,8 +16,9 @@
         }
 
         .glass {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(16px);
+            border: 1px solid rgba(15, 23, 42, 0.08);
         }
 
         .legal-box::-webkit-scrollbar,
@@ -27,243 +28,326 @@
 
         .legal-box::-webkit-scrollbar-thumb,
         .privacy-box::-webkit-scrollbar-thumb {
-            background: #4f46e5;
+            background: #14b8a6;
             border-radius: 10px;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgb(45 212 191 / 0.15);
+        }
+
+        .how-icon {
+            width: 32px;
+            height: 32px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
         }
     </style>
 </head>
 
-<body class="bg-slate-950 text-slate-200 selection:bg-indigo-500/30">
+<body class="bg-stone-50 text-slate-900 selection:bg-teal-500/30">
 
-    <nav class="fixed w-full z-50 border-b border-white/10 glass">
+    <nav class="fixed w-full z-50 border-b border-slate-200 bg-white/95 backdrop-blur-lg shadow-sm">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <img src="img/logo.png" alt="Odostrada" class="w-9 h-9 rounded-full object-contain">
-                <span class="text-2xl font-bold tracking-tighter">odostrada</span>
+                <span class="text-2xl font-bold tracking-tighter text-teal-600">odostrada</span>
             </div>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
-                <a href="#how" class="hover:text-white transition">How it Works</a>
-                <a href="#pricing" class="hover:text-white transition">Pricing</a>
-                <a href="#privacy" class="hover:text-white transition">Privacy</a>
-                <a href="#legal" class="hover:text-white transition text-indigo-400">Legal &amp; EULA</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-500">
+                <a href="#how" class="hover:text-teal-600 transition">How it Works</a>
+                <a href="#pricing" class="hover:text-teal-600 transition">Pricing</a>
+                <a href="#privacy" class="hover:text-teal-600 transition">Privacy</a>
+                <a href="#legal" class="hover:text-teal-600 transition text-teal-600">Legal &amp; EULA</a>
             </div>
             <a href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_ID"
-                class="bg-white text-slate-950 px-5 py-2 rounded-2xl text-sm font-semibold hover:bg-white/90 transition">Get
+                class="bg-orange-500 text-white px-6 py-2.5 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">Get
                 on Google Play • iOS soon</a>
         </div>
     </nav>
 
     <header class="pt-40 pb-28 px-6 max-w-4xl mx-auto text-center">
         <div
-            class="inline-flex items-center gap-2 bg-white/5 text-xs font-medium px-5 py-2 rounded-3xl border border-white/10 mb-8">
-            <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+            class="inline-flex items-center gap-2 bg-gradient-to-r from-teal-100 to-orange-100 text-teal-700 text-xs font-medium px-6 py-2 rounded-3xl border border-teal-200 mb-8">
+            <div class="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
             100% ON-DEVICE
-            <div class="w-2 h-2 bg-slate-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
             ZERO SERVERS
-            <div class="w-2 h-2 bg-slate-400 rounded-full"></div>
+            <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
             NO BACKGROUND TRACKING
         </div>
         <h1
-            class="text-6xl md:text-7xl font-extrabold tracking-tighter mb-6 bg-gradient-to-b from-white to-slate-400 bg-clip-text text-transparent leading-none">
+            class="text-6xl md:text-7xl font-extrabold tracking-tighter mb-6 bg-gradient-to-br from-slate-900 via-teal-700 to-orange-600 bg-clip-text text-transparent leading-none">
             Log Your Trips.<br>Own Your Privacy.
         </h1>
-        <p class="text-xl font-light italic text-slate-400 tracking-wide">odostrada — because it's your business.</p>
-        <p class="text-xl text-slate-400 max-w-2xl mx-auto mt-8 mb-12">
+        <p class="text-xl font-light italic text-slate-500 tracking-wide">
+            odostrada — because it's <span class="not-italic underline decoration-teal-500/60 underline-offset-4">your</span>
+            business.
+        </p>
+            
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto mt-8 mb-12">
             Snap your odometer. Instantly see exact trip distances. Classify business/personal. Export CPA-ready
             reports. All local. No accounts.
         </p>
     </header>
 
-    <section id="how" class="py-24 px-6 bg-slate-900/50">
+    <section id="how" class="py-24 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold tracking-tight mb-3">How Odostrada Works</h2>
-                <p class="text-slate-400 max-w-md mx-auto">Odometer anchors replace constant GPS tracking. Three steps.
-                    Full control.</p>
+                <h2 class="text-4xl font-bold tracking-tight mb-3 text-slate-900">How Odostrada Works</h2>
+                <p class="text-slate-500 max-w-md mx-auto">
+                    Odometer anchors replace constant GPS tracking. Three steps. Full control.
+                </p>
             </div>
+    
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass border border-white/10 rounded-3xl p-8 text-center">
+                <!-- 1 -->
+                <div class="glass border border-slate-100 rounded-3xl p-8 text-center card-hover">
                     <div
-                        class="mx-auto w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-4xl mb-6">
-                        📍</div>
-                    <h3 class="font-semibold text-2xl mb-3">1. Create Anchor</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Enter or photo your odometer reading on arrival.
-                        GPS requested only at that moment.</p>
+                        class="mx-auto w-20 h-20 bg-gradient-to-br from-teal-100 via-cyan-100 to-sky-100 border border-teal-200 rounded-3xl flex items-center justify-center mb-6 text-teal-700 shadow-md shadow-teal-100/60">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="w-10 h-10" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 21s6-5.6 6-11a6 6 0 1 0-12 0c0 5.4 6 11 6 11z"></path>
+                            <circle cx="12" cy="10" r="2.5"></circle>
+                            <path d="M9 6.5h6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-2xl mb-3 text-slate-900">1. Create Anchor</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Enter or photo your odometer reading on arrival. GPS requested only at that moment.
+                    </p>
                 </div>
-                <div class="glass border border-white/10 rounded-3xl p-8 text-center">
+    
+                <!-- 2 -->
+                <div class="glass border border-slate-100 rounded-3xl p-8 text-center card-hover">
                     <div
-                        class="mx-auto w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-4xl mb-6">
-                        🛣️</div>
-                    <h3 class="font-semibold text-2xl mb-3">2. Calculate Trip</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Next anchor instantly computes the exact trip
-                        distance. No background location data ever collected.</p>
+                        class="mx-auto w-20 h-20 bg-gradient-to-br from-orange-100 via-amber-100 to-yellow-100 border border-orange-200 rounded-3xl flex items-center justify-center mb-6 text-orange-600 shadow-md shadow-orange-100/60">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="w-10 h-10" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="7" cy="17" r="2"></circle>
+                            <circle cx="17" cy="7" r="2"></circle>
+                            <path d="M8.5 15.5L15.5 8.5"></path>
+                            <path d="M4 20h6"></path>
+                            <path d="M14 4h6"></path>
+                            <path d="M11 12l2 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-2xl mb-3 text-slate-900">2. Calculate Trip</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Next anchor instantly computes the exact trip distance. No background location data ever collected.
+                    </p>
                 </div>
-                <div class="glass border border-white/10 rounded-3xl p-8 text-center">
+    
+                <!-- 3 -->
+                <div class="glass border border-slate-100 rounded-3xl p-8 text-center card-hover">
                     <div
-                        class="mx-auto w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center text-4xl mb-6">
-                        🔄</div>
-                    <h3 class="font-semibold text-2xl mb-3">3. Classify &amp; Reconcile</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Tag business/personal. Split trips for multi-stop
-                        days. Export CPA-ready reports.</p>
+                        class="mx-auto w-20 h-20 bg-gradient-to-br from-fuchsia-100 via-pink-100 to-rose-100 border border-pink-200 rounded-3xl flex items-center justify-center mb-6 text-pink-600 shadow-md shadow-pink-100/60">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="w-10 h-10" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 5v10"></path>
+                            <path
+                                d="M6 5c0 0 2 0 3 1.2C10 7.4 12 7.4 13 6.2C14 5 16 5 18 6.2v10c-2-1.2-4-1.2-5 0C12 17.4 10 17.4 9 16.2C8 15 6 15 6 15">
+                            </path>
+                            <path d="M6 19h12"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-2xl mb-3 text-slate-900">3. Classify &amp; Reconcile</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Tag business/personal. Split trips for multi-stop days. Export CPA-ready reports.
+                    </p>
                 </div>
+    
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-24 bg-slate-900/30 border-y border-white/5">
+    <section id="pricing" class="py-24 bg-gradient-to-b from-orange-50 to-white border-y border-orange-100">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold tracking-tight mb-3">Simple Tiers</h2>
-                <p class="text-slate-400">Start free. Upgrade when you need more businesses, vehicles, or automation.
+                <h2 class="text-4xl font-bold tracking-tight mb-3 text-slate-900">Simple Tiers</h2>
+                <p class="text-slate-500">Start free, fully functional and never ads. Upgrade when you need more
+                    businesses, vehicles, or complete data backups.
                 </p>
             </div>
             <div class="grid md:grid-cols-2 gap-12">
-                <div class="p-8 rounded-3xl border border-white/10 glass">
-                    <h3 class="text-3xl font-bold mb-2">Free</h3>
-                    <p class="text-slate-400 mb-8">For solo users</p>
+                <!-- Free Tier -->
+                <div class="p-8 rounded-3xl border border-slate-200 bg-white shadow-xl card-hover">
+                    <h3 class="text-3xl font-bold mb-2 text-slate-900">Free</h3>
+                    <p class="text-slate-500 mb-8">For one business and simple report</p>
                     <ul class="space-y-4 text-sm">
-                        <li class="flex items-center gap-3 text-indigo-400">✓ 1 editable business and 1 active vehicle
+                        <li class="flex items-center gap-3 text-teal-600">✓ 1 editable business and 1 active vehicle
                         </li>
-                        <li class="flex items-center gap-3 text-indigo-400">✓ Odometer photo export as zip</li>
-                        <li class="flex items-center gap-3 text-indigo-400">✓ CSV export</li>
+                        <li class="flex items-center gap-3 text-teal-600">✓ Odometer photo export as zip</li>
+                        <li class="flex items-center gap-3 text-teal-600">✓ CPA-ready CSV report</li>
                     </ul>
                 </div>
-                <div class="p-8 rounded-3xl border border-indigo-500/30 bg-indigo-500/5 relative">
+
+                <!-- Business Pro Tier -->
+                <div class="p-8 rounded-3xl border border-orange-400 bg-white shadow-2xl relative card-hover">
                     <div
-                        class="absolute -top-3 right-6 bg-indigo-500 text-white text-xs font-bold px-4 py-1 rounded-3xl">
-                        RECOMMENDED</div>
-                    <h3 class="text-3xl font-bold mb-2">Business Pro</h3>
-                    <p class="text-slate-400 mb-8">For growing businesses</p>
+                        class="absolute -top-3 right-6 bg-orange-500 text-white text-xs font-bold px-5 py-1 rounded-3xl">
+                        RECOMMENDED
+                    </div>
+                    <h3 class="text-3xl font-bold mb-2 text-slate-900">Business Pro</h3>
+                    <p class="text-slate-500 mb-4">For managing more businesses or vehicles, data backups</p>
+
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <button
+                            onclick="this.classList.add('!bg-teal-600','!text-white');this.parentElement.querySelectorAll('button').forEach(b=>b!==this&&b.classList.remove('!bg-teal-600','!text-white'))"
+                            class="flex-1 text-xs font-medium px-4 py-2 rounded-2xl border border-teal-200 hover:border-teal-400 transition bg-white">
+                            Monthly<br><span class="text-lg font-semibold">$4.99</span>
+                        </button>
+                        <button
+                            onclick="this.classList.add('!bg-teal-600','!text-white');this.parentElement.querySelectorAll('button').forEach(b=>b!==this&&b.classList.remove('!bg-teal-600','!text-white'))"
+                            class="flex-1 text-xs font-medium px-4 py-2 rounded-2xl border-2 border-orange-400 bg-orange-50 text-orange-700 relative">
+                            Annual<br><span class="text-lg font-semibold">$49.99/yr</span>
+                            <span
+                                class="absolute -top-2 -right-2 bg-emerald-500 text-white text-[10px] px-2 py-px rounded-full font-bold">2 MONTHS FREE
+                            </span>
+                        </button>
+                        <button
+                            onclick="this.classList.add('!bg-teal-600','!text-white');this.parentElement.querySelectorAll('button').forEach(b=>b!==this&&b.classList.remove('!bg-teal-600','!text-white'))"
+                            class="flex-1 text-xs font-medium px-4 py-2 rounded-2xl border border-teal-200 hover:border-teal-400 transition bg-white">
+                            Lifetime<br><span class="text-lg font-semibold">$129</span>
+                        </button>
+                    </div>
+
                     <ul class="space-y-4 text-sm">
-                        <li class="flex items-center gap-3 text-indigo-400">✓ Up to 3 businesses and 3 vehicles on one
-                            app</li>
-                        <li class="flex items-center gap-3 text-indigo-400">✓ Full backup and restore, including images
+                        <li class="flex items-center gap-3 text-teal-600">✓ Up to 3 businesses and 3 vehicles on one app
                         </li>
-                        <li class="flex items-center gap-3 text-indigo-400">✓ CPA-ready complete PDF form</li>
-                        <li class="flex items-center gap-3 text-indigo-400">✓ Backup reminders</li>
+                        <li class="flex items-center gap-3 text-teal-600">✓ Full backup and restore, including images
+                        </li>
+                        <li class="flex items-center gap-3 text-teal-600">✓ CPA-ready CSV report</li>
+                        <li class="flex items-center gap-3 text-teal-600">✓ Backup reminders</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="privacy" class="py-24 px-6 max-w-3xl mx-auto">
-        <p class="section-kicker text-xs font-bold text-slate-300 mb-3">PRIVACY</p>
-        <h2 class="text-3xl font-bold mb-8 text-white">Privacy Policy</h2>
+    <section id="privacy" class="py-24 px-6 max-w-3xl mx-auto bg-white">
+        <p class="section-kicker text-xs font-bold text-teal-600 mb-3 uppercase tracking-widest">Privacy</p>
+        <h2 class="text-3xl font-bold mb-8 text-slate-900">Privacy Policy</h2>
         <div
-            class="privacy-box h-96 overflow-y-auto p-8 glass border border-white/10 rounded-3xl text-sm text-slate-400 leading-relaxed">
+            class="privacy-box h-96 overflow-y-auto p-8 glass border border-slate-200 rounded-3xl text-sm text-slate-600 leading-relaxed shadow-sm">
             <div
-                class="inline-flex rounded-full border border-slate-400/20 bg-slate-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-200">
-                Effective March 2026</div>
-            <p><strong>1. Local-First Data Storage.</strong> odostrada is designed to keep your mileage ledger on your
-                device. Odometer readings, segment classifications, location tags, odometer images, legal-consent
-                records, and related settings are stored locally on the device unless and until you choose to export or
-                share them.</p>
-            <p><strong>2. Location Data.</strong> odostrada requests location access only when you create an anchor and
-                only to tag that anchor. odostrada does not use background location tracking to monitor your movement
-                over time. If you deny location permission, the app can still log mileage, but anchors may be saved
-                without GPS metadata.</p>
-            <p><strong>3. Camera and Images.</strong> odostrada may request camera access to capture odometer images and
-                run on-device OCR. If camera access is denied, the app can still be used by manually entering odometer
-                readings. Odometer images are stored locally and may be included in exports or backups you choose to
-                create.</p>
-            <p><strong>4. No Central User Account.</strong> odostrada does not require you to create an account with us.
-                However, if you purchase Business Pro, subscription and entitlement status may be processed by our
-                billing and subscription provider, RevenueCat, and the applicable app marketplace such as Google Play.
+                class="inline-flex rounded-full border border-slate-400/20 bg-slate-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700 mb-6">
+                Effective March 2026
+            </div>
+    
+            <p class="mb-4 italic underline text-slate-800">For the purposes of this policy, "the Company" refers to Mana
+                Kitchen LLC and its authorized DBAs.</p>
+    
+            <p class="mb-4"><strong>1. Local-First Data Sovereignty.</strong> odostrada is designed with a "Zero-Server"
+                architecture. Your mileage ledger and trip history are stored exclusively on your device. The Company does
+                not operate a central database and cannot see or access your records.</p>
+    
+            <p class="mb-4"><strong>2. Location Data.</strong> Precise Location access is requested only when you manually
+                create an "Anchor." The Company does not engage in background tracking or persistent movement monitoring.
             </p>
-            <p><strong>5. Third-Party Services.</strong> odostrada uses third-party platform services where necessary to
-                support subscriptions, payments, reminders, link handling, and map launching. For Business Pro
-                entitlement handling, RevenueCat may process purchase and subscription metadata in accordance with its
-                own privacy practices.</p>
-            <p><strong>6. User-Initiated Sharing and Export.</strong> odostrada does not automatically upload your trip
-                history to our servers. If you export CSV files, odometer photo archives, or full backups, and then
-                share them through email, cloud storage, messaging apps, AirDrop, or similar services, those files may
-                leave your device and become subject to the privacy practices of those services.</p>
-            <p><strong>7. Data Retention and Deletion.</strong> Because odostrada is local-first, you control retention.
-                Data generally remains on your device until you delete it, uninstall the app, clear app storage, or
-                overwrite it through restore or import actions.</p>
-            <p><strong>8. Legal Consent Records.</strong> odostrada may record the time, source URL, and version of your
-                acceptance of legal terms on your device. These records may also be included in user-created backups.
+    
+            <p class="mb-4"><strong>3. Camera & Image Capture.</strong> Camera access is used for capturing odometer images.
+                The Company does not have access to your camera feed or resulting images; all framing and storage occur
+                locally on your device hardware.</p>
+    
+            <p class="mb-4"><strong>4. Pseudonymous Identifiers.</strong> Third-party billing services (including
+                RevenueCat) may assign a random identifier to your device to verify "Pro" status. This identifier does not
+                contain personal identity information (PII) accessible by the Company.</p>
+    
+            <p class="mb-4"><strong>5. Data Retention & Deletion.</strong> You control all data. Deleting the app removes
+                all local records. Because the Company does not store your data on servers, we cannot "restore" logs for you
+                if you uninstall the app without a manual backup.</p>
+    
+            <p class="mb-4"><strong>6. Children’s Privacy.</strong> The App is a business tool intended for adults. The
+                Company does not knowingly collect or solicit data from children under the age of 16.</p>
+    
+            <p class="mt-8 pt-6 border-t border-slate-200 text-slate-500 text-xs uppercase italic text-center">
+                Questions: info@odostrada.com
             </p>
-            <p><strong>9. Changes to This Policy.</strong> We may update this Privacy Policy from time to time. When
-                required by the app, you may be asked to review and accept updated legal terms before continuing to use
-                certain features.</p>
         </div>
     </section>
-
-    <section id="legal" class="py-24 px-6 bg-slate-900/30 border-t border-white/5">
+    
+    <section id="legal" class="py-24 px-6 bg-white border-t border-slate-200">
         <div class="max-w-3xl mx-auto">
-            <p class="section-kicker text-xs font-bold text-slate-300 mb-3">LEGAL</p>
-            <h2 class="text-3xl font-bold mb-8 text-white">End User License Agreement</h2>
+            <p class="section-kicker text-xs font-bold text-emerald-600 mb-3 uppercase tracking-widest">Legal</p>
+            <h2 class="text-3xl font-bold mb-8 text-slate-900">End User License Agreement</h2>
             <div
-                class="legal-box h-96 overflow-y-auto p-8 glass border border-white/10 rounded-2xl text-sm text-slate-400 leading-relaxed">
-                <!-- full EULA content from your document unchanged -->
-                <p class="mb-4 font-bold text-slate-300 uppercase tracking-wide">1. Acceptance of Terms</p>
-                <p class="mb-6">By downloading, installing, or using odostrada, you agree to be bound by this End User
-                    License Agreement. If you do not agree, do not use the app. odostrada may require renewed acceptance
-                    when legal terms are updated.</p>
-                <p class="mb-4 font-bold text-slate-300 uppercase tracking-wide">2. License Grant</p>
-                <p class="mb-6">Subject to your compliance with this Agreement, you are granted a limited,
-                    non-exclusive, non-transferable, revocable license to use odostrada for your personal or internal
-                    business mileage tracking needs.</p>
-                <p class="mb-4 font-bold text-slate-300 uppercase tracking-wide">3. Product Scope and Tiers</p>
-                <p class="mb-4"><strong>Standard:</strong> Standard access supports one editable business and one active
-                    vehicle, along with CSV export and odometer photo export.</p>
-                <p class="mb-6"><strong>Business Pro:</strong> Business Pro may include support for up to three
-                    businesses, up to three vehicles, full backup and restore with odometer images, reminders, and other
-                    subscription-gated features as made available in the app.</p>
-                <p class="mb-4 font-bold text-slate-300 uppercase tracking-wide">4. Subscriptions and Purchases</p>
-                <p class="mb-6">Paid subscriptions, renewals, cancellations, billing, and refunds are handled by the
-                    applicable app marketplace and related billing providers. Subscription entitlement handling may also
-                    rely on RevenueCat. We do not directly process your payment card information.</p>
-                <p class="mb-4 font-bold text-slate-300 uppercase tracking-wide">5. User Responsibility</p>
-                <p class="mb-6">You are responsible for reviewing and verifying all mileage records, classifications,
-                    odometer entries, exported reports, and backup files. odostrada is a record-keeping tool and does
-                    not replace your obligation to maintain accurate records.</p>
-                <p class="mb-4 font-bold text-slate-300 uppercase tracking-wide">6. OCR and Accuracy Disclaimer</p>
-                <p class="mb-6">OCR is provided as a convenience only and may produce inaccurate results. You must
-                    verify odometer readings before saving or relying on them. We are not responsible for losses,
-                    penalties, or filing errors arising from inaccurate, incomplete, or unreviewed entries.</p>
-                <p class="mb-4 font-bold text-slate-300 uppercase tracking-wide">7. No Legal, Tax, or Accounting Advice
+                class="legal-box h-96 overflow-y-auto p-8 glass border border-slate-200 rounded-3xl text-sm text-slate-600 leading-relaxed shadow-sm">
+
+                <p class="mb-6 italic text-slate-800 border-b border-slate-100 pb-4">
+                    This End User License Agreement is a legal agreement between you and <strong>Mana Kitchen LLC</strong>
+                    (hereafter referred to as <strong>"the Operator"</strong>).
                 </p>
-                <p class="mb-6">odostrada and its operator do not provide legal, tax, accounting, or audit advice. Any
-                    summaries, calculations, mileage estimates, deduction estimates, or classifications generated by the
-                    app are informational only. Consult a qualified professional for advice specific to your situation.
-                </p>
-                <p class="mb-4 font-bold text-slate-300 uppercase tracking-wide">8. Local Data and Backup Risk</p>
-                <p class="mb-6">odostrada is primarily a local-first app. You are responsible for maintaining your own
-                    backup practices. We are not liable for data loss resulting from device loss, device theft, hardware
-                    failure, software corruption, accidental deletion, failed migrations, or user-managed exports shared
-                    through third-party services.</p>
-                <p class="mb-4 font-bold text-slate-300 uppercase tracking-wide">9. Permissions and Feature Availability
-                </p>
-                <p class="mb-6">Certain features require device permissions, including camera and location access. If
-                    you deny those permissions, some features may be limited or unavailable. For example, camera denial
-                    may disable OCR-based capture while still permitting manual odometer entry, and location denial may
-                    prevent GPS tagging of anchors.</p>
-                <p class="mb-4 font-bold text-slate-300 uppercase tracking-wide">10. Limitation of Liability</p>
-                <p class="mb-6">To the maximum extent permitted by law, odostrada and its operator shall not be liable
-                    for indirect, incidental, special, consequential, exemplary, or punitive damages, or for any loss of
-                    profits, revenue, data, goodwill, business opportunity, or tax position arising from or related to
-                    the use of the app.</p>
-                <p class="mb-4 font-bold text-slate-300 uppercase tracking-wide">11. Changes and Termination</p>
-                <p class="mb-6">We may update, suspend, or discontinue features, pricing, or availability at any time.
-                    We may also update this Agreement from time to time. Your continued use of odostrada after an update
-                    constitutes acceptance of the updated terms where permitted by law.</p>
-                <p class="mb-4 font-bold text-slate-300 uppercase tracking-wide">12. Contact and Operator Information
-                </p>
-                <p class="mb-6">Questions about these terms may be directed to Mana Kitchen LLC at info@odostrada.com or
-                    through the applicable app store listing for odostrada.</p>
-                <p class="mt-8 pt-6 border-t border-white/5 text-slate-600 text-xs uppercase italic text-center">
-                    Operator: Mana Kitchen LLC · Contact: info@odostrada.com
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">1. Acceptance of Terms</p>
+                <p class="mb-6">By downloading, installing, or using odostrada, you agree to be bound by this Agreement. If
+                    you do not agree, do not use the app. The Operator may require renewed acceptance when legal terms are
+                    updated.</p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">2. Product Scope and Tiers</p>
+                <p class="mb-4"><strong>Standard:</strong> Supports one editable business and one active vehicle, along with
+                    CSV and image exports.</p>
+                <p class="mb-6"><strong>Business Pro:</strong> Supports expanded business/vehicle counts, full database
+                    backups, and other subscription-gated features as made available by the Operator.</p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">3. Subscriptions & Lifetime Terms</p>
+                <p class="mb-2"><strong>Billing:</strong> Transactions are handled by the applicable app marketplace.
+                    Entitlement handling may rely on third-party services such as RevenueCat. The Operator does not process
+                    your payment card information directly.</p>
+                <p class="mb-2"><strong>Auto-Renewal:</strong> Subscriptions renew unless canceled at least 24 hours before
+                    the end of the current period.</p>
+                <p class="mb-2"><strong>Cancellation:</strong> Uninstalling the app DOES NOT cancel a subscription. You must
+                    manage/cancel via your marketplace account settings.</p>
+                <p class="mb-6"><strong>Lifetime Access:</strong> This tier grants access for the functional lifespan of the
+                    app as maintained by the Operator on its current distribution platforms.</p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">4. User-Generated Content & Conduct</p>
+                <p class="mb-6">You are solely responsible for images captured via the App. You agree not to use the App to
+                    capture or store material that is illegal, infringing, or harmful. The Operator does not monitor local
+                    user content but reserves the right to terminate access for illicit use.</p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">5. No Professional Advice</p>
+                <p class="mb-6">odostrada is a record-keeping tool. The Operator does not provide tax, legal, or accounting
+                    advice. Always consult a qualified CPA to ensure your logs meet specific audit requirements.</p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">6. OCR & Accuracy Disclaimer</p>
+                <p class="mb-6">OCR is provided for convenience. You MUST verify every entry. The Operator is not
+                    responsible for penalties or filing errors arising from unreviewed or inaccurate data.</p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">7. Local Data & Backup Risk</p>
+                <p class="mb-6">odostrada is a local-first app. The Operator is NOT liable for data loss due to device
+                    theft, hardware failure, or software corruption. Users are responsible for maintaining their own
+                    external backups.</p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">8. Indemnification</p>
+                <p class="mb-6">You agree to indemnify and hold harmless the Operator from any claims or expenses (including
+                    legal fees) arising from your use of the app, including tax audits or regulatory non-compliance
+                    resulting from data logged within the app.</p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">9. Limitation of Liability</p>
+                <p class="mb-6">To the maximum extent permitted by law, the Operator shall not be liable for indirect,
+                    incidental, or consequential damages, including loss of revenue or tax positions, arising from the use
+                    of the app.</p>
+
+                <p class="mt-8 pt-6 border-t border-slate-200 text-slate-500 text-xs uppercase italic text-center">
+                    Questions: info@odostrada.com
                 </p>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-slate-600 text-[10px] uppercase tracking-[0.2em] border-t border-white/5">
+    <footer
+        class="py-12 text-center text-slate-500 text-[10px] uppercase tracking-[0.2em] border-t border-slate-200 bg-white">
         <p>&copy; 2026 Mana Kitchen LLC.</p>
-        <p class="mt-2 text-slate-700 font-bold tracking-widest">Privacy-First &bull; Local-First &bull; 100% On-Device
+        <p class="mt-2 text-teal-600 font-bold tracking-widest">Privacy-First &bull; Local-First &bull; 100% On-Device
         </p>
     </footer>
 
