@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#fafaf9">
     <title>Odostrada | Privacy-First Mileage Tracking</title>
     <link rel="icon" href="img/odo-logo.jpg" type="image/jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,49 +17,51 @@
         html {
             color-scheme: light;
             -webkit-text-size-adjust: 100%;
+            background: #fafaf9 !important;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #fafaf9;
-            color: #0f172a;
+            background: #fafaf9 !important;
+            color: #0f172a !important;
+        }
+
+        .bg-white {
+            background-color: #ffffff !important;
+        }
+
+        .bg-stone-50 {
+            background-color: #fafaf9 !important;
+        }
+
+        nav,
+        header,
+        section,
+        footer,
+        .glass,
+        .privacy-box,
+        .legal-box {
+            forced-color-adjust: none;
+            -webkit-backdrop-filter: blur(16px);
         }
 
         .glass {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(15, 23, 42, 0.08);
-        }
-
-        .glass,
-        nav,
-        section,
-        footer,
-        header {
-            color-scheme: light;
         }
 
         .hero-title {
             color: #0f172a;
         }
 
-        @supports ((-webkit-background-clip: text) or (background-clip: text)) {
-            .hero-title {
+        @supports (-webkit-background-clip: text) {
+            .hero-title.gradient-safe {
                 background: linear-gradient(135deg, #0f172a 0%, #0f766e 55%, #ea580c 100%);
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
                 -webkit-text-fill-color: transparent;
-            }
-        }
-
-        /* Mobile dark-mode / forced-theme safety */
-        @media (max-width: 768px) {
-            .hero-title {
-                background: none !important;
-                color: #0f172a !important;
-                -webkit-text-fill-color: #0f172a !important;
             }
         }
 
@@ -94,17 +97,6 @@
             transform: translateY(-8px);
             box-shadow: 0 25px 50px -12px rgb(45 212 191 / 0.15);
         }
-
-        .how-icon {
-            width: 32px;
-            height: 32px;
-            stroke: currentColor;
-            fill: none;
-            stroke-width: 2.2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            flex-shrink: 0;
-        }
     </style>
 </head>
 
@@ -127,7 +119,7 @@
             </div>
 
             <a href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_ID"
-                class="shrink-0 bg-orange-500 text-white px-4 sm:px-6 py-2.5 rounded-3xl text-xs sm:text-sm font-semibold hover:bg-orange-600 transition shadow-sm text-center leading-tight">
+                class="hidden md:inline-flex shrink-0 bg-orange-500 text-white px-6 py-2.5 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm text-center leading-tight">
                 Get on Google Play • iOS soon
             </a>
         </div>
@@ -150,7 +142,8 @@
             </div>
         </div>
 
-        <h1 class="hero-title text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-none">
+        <h1
+            class="hero-title gradient-safe text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-none">
             Log Your Trips.<br>Own Your Privacy.
         </h1>
 
@@ -159,10 +152,17 @@
             business.
         </p>
 
-        <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mt-8 mb-12">
+        <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mt-8 mb-8">
             Snap your odometer. Instantly see exact trip distances. Classify business/personal. Export CPA-ready
             reports. All local. No accounts.
         </p>
+
+        <div class="md:hidden mt-2 mb-4">
+            <a href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_ID"
+                class="inline-flex items-center justify-center bg-orange-500 text-white px-6 py-3 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">
+                Get on Google Play • iOS soon
+            </a>
+        </div>
     </header>
 
     <section id="how" class="py-24 px-6 bg-white">
@@ -175,14 +175,17 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
+                <!-- 1 -->
                 <div class="glass border border-slate-100 rounded-3xl p-8 text-center card-hover">
                     <div
                         class="mx-auto w-20 h-20 bg-gradient-to-br from-teal-100 via-cyan-100 to-sky-100 border border-teal-200 rounded-3xl flex items-center justify-center mb-6 text-teal-700 shadow-md shadow-teal-100/60">
+                        <!-- map pin + plus -->
                         <svg viewBox="0 0 24 24" aria-hidden="true" class="w-10 h-10" fill="none" stroke="currentColor"
                             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 21s6-5.6 6-11a6 6 0 1 0-12 0c0 5.4 6 11 6 11z"></path>
-                            <circle cx="12" cy="10" r="2.5"></circle>
-                            <path d="M9 6.5h6"></path>
+                            <circle cx="12" cy="10" r="2.3"></circle>
+                            <path d="M18.5 4.5v4"></path>
+                            <path d="M16.5 6.5h4"></path>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-2xl mb-3 text-slate-900">1. Create Anchor</h3>
@@ -191,17 +194,23 @@
                     </p>
                 </div>
 
+                <!-- 2 -->
                 <div class="glass border border-slate-100 rounded-3xl p-8 text-center card-hover">
                     <div
                         class="mx-auto w-20 h-20 bg-gradient-to-br from-orange-100 via-amber-100 to-yellow-100 border border-orange-200 rounded-3xl flex items-center justify-center mb-6 text-orange-600 shadow-md shadow-orange-100/60">
+                        <!-- two pins connected by a path -->
                         <svg viewBox="0 0 24 24" aria-hidden="true" class="w-10 h-10" fill="none" stroke="currentColor"
                             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="7" cy="17" r="2"></circle>
-                            <circle cx="17" cy="7" r="2"></circle>
-                            <path d="M8.5 15.5L15.5 8.5"></path>
-                            <path d="M4 20h6"></path>
-                            <path d="M14 4h6"></path>
-                            <path d="M11 12l2 2"></path>
+                            <path d="M7 12.5c0 0 3-6 10-6"></path>
+                            <path d="M7 12.5c0 0 3 6 10 6"></path>
+                            <path
+                                d="M7 15.5s2.8-2.4 2.8-5.2A2.8 2.8 0 0 0 7 7.5a2.8 2.8 0 0 0-2.8 2.8C4.2 13.1 7 15.5 7 15.5z">
+                            </path>
+                            <path
+                                d="M17 16.5s2.8-2.4 2.8-5.2A2.8 2.8 0 0 0 17 8.5a2.8 2.8 0 0 0-2.8 2.8c0 2.8 2.8 5.2 2.8 5.2z">
+                            </path>
+                            <circle cx="7" cy="10.3" r="0.9"></circle>
+                            <circle cx="17" cy="11.3" r="0.9"></circle>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-2xl mb-3 text-slate-900">2. Calculate Trip</h3>
@@ -211,16 +220,20 @@
                     </p>
                 </div>
 
+                <!-- 3 -->
                 <div class="glass border border-slate-100 rounded-3xl p-8 text-center card-hover">
                     <div
                         class="mx-auto w-20 h-20 bg-gradient-to-br from-fuchsia-100 via-pink-100 to-rose-100 border border-pink-200 rounded-3xl flex items-center justify-center mb-6 text-pink-600 shadow-md shadow-pink-100/60">
+                        <!-- clipboard with checkmarks -->
                         <svg viewBox="0 0 24 24" aria-hidden="true" class="w-10 h-10" fill="none" stroke="currentColor"
                             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 5v10"></path>
-                            <path
-                                d="M6 5c0 0 2 0 3 1.2C10 7.4 12 7.4 13 6.2C14 5 16 5 18 6.2v10c-2-1.2-4-1.2-5 0C12 17.4 10 17.4 9 16.2C8 15 6 15 6 15">
-                            </path>
-                            <path d="M6 19h12"></path>
+                            <rect x="6" y="5" width="12" height="15" rx="2"></rect>
+                            <path d="M9 5.5h6"></path>
+                            <path d="M10 10.5l1.2 1.2L14 9"></path>
+                            <path d="M10 15.5l1.2 1.2L14 14"></path>
+                            <path d="M15.5 10.5h1.5"></path>
+                            <path d="M15.5 15.5h1.5"></path>
+                            <path d="M9.2 3.8h5.6a1.2 1.2 0 0 1 1.2 1.2v.5H8V5a1.2 1.2 0 0 1 1.2-1.2z"></path>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-2xl mb-3 text-slate-900">3. Classify &amp; Reconcile</h3>
