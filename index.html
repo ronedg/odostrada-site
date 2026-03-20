@@ -131,7 +131,7 @@
             <div class="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
             100% ON-DEVICE
             <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
-            ZERO SERVERS
+            LOCAL-FIRST
             <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
             NO BACKGROUND TRACKING
         </div>
@@ -143,7 +143,7 @@
         </div>
 
         <h1
-            class="hero-title gradient-safe text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-none">
+            class="hero-title gradient-safe text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.06] pb-2">
             Log Your Trips.<br>Own Your Privacy.
         </h1>
 
@@ -153,8 +153,8 @@
         </p>
 
         <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mt-8 mb-8">
-            Snap your odometer. Instantly see exact trip distances. Classify business/personal. Export CPA-ready
-            reports. All local. No accounts.
+            Snap your odometer. Instantly see exact trip distances. Classify business or personal use. Export organized
+            mileage reports. All local. No accounts required.
         </p>
 
         <div class="md:hidden mt-2 mb-4">
@@ -175,13 +175,14 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- 1 -->
                 <div class="glass border border-slate-100 rounded-3xl p-8 text-center card-hover">
                     <div
                         class="mx-auto w-24 h-24 bg-gradient-to-br from-teal-100 via-cyan-100 to-sky-100 border border-teal-200 rounded-[2rem] flex items-center justify-center mb-6 text-teal-700 shadow-md shadow-teal-100/60">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" class="w-[52px] h-[52px]" fill="none" stroke="currentColor"
-                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 20.75s5.25-4.95 5.25-9.5A5.25 5.25 0 1 0 6.75 11.25C6.75 15.8 12 20.75 12 20.75z"></path>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="w-[58px] h-[58px]" fill="none"
+                            stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12 20.75s5.25-4.95 5.25-9.5A5.25 5.25 0 1 0 6.75 11.25C6.75 15.8 12 20.75 12 20.75z">
+                            </path>
                             <circle cx="12" cy="11" r="2.1"></circle>
                             <path d="M18.25 5.25v3.5"></path>
                             <path d="M16.5 7h3.5"></path>
@@ -189,46 +190,38 @@
                     </div>
                     <h3 class="font-semibold text-2xl mb-3 text-slate-900">1. Create Anchor</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Enter or photo your odometer reading on arrival. GPS requested only at that moment.
+                        Enter or photo your odometer reading on arrival. Location is requested only at that moment.
                     </p>
                 </div>
 
-                <!-- 2 -->
                 <div class="glass border border-slate-100 rounded-3xl p-8 text-center card-hover">
-                <div
-                    class="mx-auto w-24 h-24 bg-gradient-to-br from-orange-100 via-amber-100 to-yellow-100 border border-orange-200 rounded-[2rem] flex items-center justify-center mb-6 text-orange-600 shadow-md shadow-orange-100/60">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" class="w-[62px] h-[62px]" fill="none" stroke="currentColor"
-                        stroke-linecap="round" stroke-linejoin="round">
-                
-                        <!-- left pin -->
-                        <path d="M6.8 16.2s2.7-2.3 2.7-4.9A2.7 2.7 0 0 0 6.8 8.6a2.7 2.7 0 0 0-2.7 2.7c0 2.6 2.7 4.9 2.7 4.9z"
-                            stroke-width="1.45"></path>
-                
-                        <!-- right pin -->
-                        <path d="M17.2 15s2.7-2.3 2.7-4.9A2.7 2.7 0 0 0 17.2 7.4a2.7 2.7 0 0 0-2.7 2.7c0 2.6 2.7 4.9 2.7 4.9z"
-                            stroke-width="1.45"></path>
-                
-                        <!-- pin centers -->
-                        <circle cx="6.8" cy="11.3" r="0.78" stroke-width="1.3"></circle>
-                        <circle cx="17.2" cy="10.1" r="0.78" stroke-width="1.3"></circle>
-                
-                        <!-- connector -->
-                        <path d="M8.95 13.1L15.05 10.65" stroke-width="1.2"></path>
-                    </svg>
-                </div>
+                    <div
+                        class="mx-auto w-24 h-24 bg-gradient-to-br from-orange-100 via-amber-100 to-yellow-100 border border-orange-200 rounded-[2rem] flex items-center justify-center mb-6 text-orange-600 shadow-md shadow-orange-100/60">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="w-[62px] h-[62px]" fill="none"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M6.8 16.2s2.7-2.3 2.7-4.9A2.7 2.7 0 0 0 6.8 8.6a2.7 2.7 0 0 0-2.7 2.7c0 2.6 2.7 4.9 2.7 4.9z"
+                                stroke-width="1.45"></path>
+                            <path
+                                d="M17.2 15s2.7-2.3 2.7-4.9A2.7 2.7 0 0 0 17.2 7.4a2.7 2.7 0 0 0-2.7 2.7c0 2.6 2.7 4.9 2.7 4.9z"
+                                stroke-width="1.45"></path>
+                            <circle cx="6.8" cy="11.3" r="0.78" stroke-width="1.3"></circle>
+                            <circle cx="17.2" cy="10.1" r="0.78" stroke-width="1.3"></circle>
+                            <path d="M8.95 13.1L15.05 10.65" stroke-width="1.2"></path>
+                        </svg>
+                    </div>
                     <h3 class="font-semibold text-2xl mb-3 text-slate-900">2. Calculate Trip</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Next anchor instantly computes the exact trip distance. No background location data ever
-                        collected.
+                        The next anchor computes the exact distance traveled from the prior anchor. No background route
+                        tracking required.
                     </p>
                 </div>
 
-                <!-- 3 -->
                 <div class="glass border border-slate-100 rounded-3xl p-8 text-center card-hover">
                     <div
                         class="mx-auto w-24 h-24 bg-gradient-to-br from-fuchsia-100 via-pink-100 to-rose-100 border border-pink-200 rounded-[2rem] flex items-center justify-center mb-6 text-pink-600 shadow-md shadow-pink-100/60">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" class="w-[52px] h-[52px]" fill="none" stroke="currentColor"
-                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" class="w-[58px] h-[58px]" fill="none"
+                            stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="6.5" y="5.5" width="11" height="14" rx="2.2"></rect>
                             <path d="M9.25 4.5h5.5a1.1 1.1 0 0 1 1.1 1.1v.65h-7.7V5.6a1.1 1.1 0 0 1 1.1-1.1z"></path>
                             <path d="M9.4 10.1l1.15 1.15 2.15-2.35"></path>
@@ -239,7 +232,8 @@
                     </div>
                     <h3 class="font-semibold text-2xl mb-3 text-slate-900">3. Classify &amp; Reconcile</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Tag business/personal. Split trips for multi-stop days. Export CPA-ready reports.
+                        Tag business or personal use, split mixed-use mileage, and export organized reports for your own
+                        bookkeeping workflow.
                     </p>
                 </div>
             </div>
@@ -251,20 +245,19 @@
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold tracking-tight mb-3 text-slate-900">Simple Tiers</h2>
                 <p class="text-slate-500">
-                    Start free, fully functional and never ads. Upgrade when you need more businesses, vehicles, or
-                    complete data backups.
+                    Start free. Upgrade when you need more businesses, vehicles, or full backup and restore.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="p-8 rounded-3xl border border-slate-200 bg-white shadow-xl card-hover">
                     <h3 class="text-3xl font-bold mb-2 text-slate-900">Free</h3>
-                    <p class="text-slate-500 mb-8">For one business and simple report</p>
+                    <p class="text-slate-500 mb-8">For one business and basic reporting</p>
                     <ul class="space-y-4 text-sm">
                         <li class="flex items-center gap-3 text-teal-600">✓ 1 editable business and 1 active vehicle
                         </li>
-                        <li class="flex items-center gap-3 text-teal-600">✓ Odometer photo export as zip</li>
-                        <li class="flex items-center gap-3 text-teal-600">✓ CPA-ready CSV report</li>
+                        <li class="flex items-center gap-3 text-teal-600">✓ Odometer photo export as ZIP</li>
+                        <li class="flex items-center gap-3 text-teal-600">✓ CSV mileage report export</li>
                     </ul>
                 </div>
 
@@ -275,7 +268,7 @@
                     </div>
 
                     <h3 class="text-3xl font-bold mb-2 text-slate-900">Business Pro</h3>
-                    <p class="text-slate-500 mb-4">For managing more businesses or vehicles, data backups</p>
+                    <p class="text-slate-500 mb-4">For more businesses or vehicles and full backup capability</p>
 
                     <div class="flex flex-wrap gap-2 mb-8">
                         <button
@@ -302,12 +295,10 @@
                     </div>
 
                     <ul class="space-y-4 text-sm">
-                        <li class="flex items-center gap-3 text-teal-600">✓ Up to 3 businesses and 3 vehicles on one
-                            app
-                        </li>
+                        <li class="flex items-center gap-3 text-teal-600">✓ Up to 3 businesses and 3 vehicles</li>
                         <li class="flex items-center gap-3 text-teal-600">✓ Full backup and restore, including images
                         </li>
-                        <li class="flex items-center gap-3 text-teal-600">✓ CPA-ready CSV report</li>
+                        <li class="flex items-center gap-3 text-teal-600">✓ CSV mileage report export</li>
                         <li class="flex items-center gap-3 text-teal-600">✓ Backup reminders</li>
                     </ul>
                 </div>
@@ -316,138 +307,279 @@
     </section>
 
     <section id="privacy" class="py-24 px-6 max-w-3xl mx-auto bg-white">
-        <p class="section-kicker text-xs font-bold text-teal-600 mb-3 uppercase tracking-widest">Privacy</p>
+        <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-widest">Privacy</p>
         <h2 class="text-3xl font-bold mb-8 text-slate-900">Privacy Policy</h2>
 
         <div
             class="privacy-box h-96 overflow-y-auto p-8 glass border border-slate-200 rounded-3xl text-sm text-slate-600 leading-relaxed shadow-sm">
             <div
                 class="inline-flex rounded-full border border-slate-400/20 bg-slate-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-700 mb-6">
-                Effective March 2026
+                Effective March 20, 2026
             </div>
 
-            <p class="mb-4 italic underline text-slate-800">
-                For the purposes of this policy, "the Company" refers to Mana Kitchen LLC and its authorized DBAs.
+            <p class="mb-4 italic text-slate-800">
+                Odostrada is operated by <strong>Mana Kitchen LLC</strong>. In this Privacy Policy, “Odostrada,” “we,”
+                “us,” and “our” refer to Mana Kitchen LLC in connection with the Odostrada app and related services.
             </p>
 
-            <p class="mb-4"><strong>1. Local-First Data Sovereignty.</strong> odostrada is designed with a
-                "Zero-Server"
-                architecture. Your mileage ledger and trip history are stored exclusively on your device. The Company
-                does
-                not operate a central database and cannot see or access your records.</p>
+            <p class="mb-4"><strong>1. Overview.</strong> Odostrada is a local-first mileage logging app. In ordinary
+                app use, mileage logs, trip history, and odometer images are intended to remain stored on your device
+                rather than being transmitted to our servers for central storage.</p>
 
-            <p class="mb-4"><strong>2. Location Data.</strong> Precise Location access is requested only when you
-                manually
-                create an "Anchor." The Company does not engage in background tracking or persistent movement
-                monitoring.
+            <p class="mb-4"><strong>2. Information Stored Locally on Your Device.</strong> Depending on how you use the
+                app, Odostrada may store locally on your device information such as odometer readings, trip distances,
+                trip classifications, vehicle and business labels, images you capture, export files, and backup files
+                you choose to create.</p>
+
+            <p class="mb-4"><strong>3. Location Data.</strong> Precise location may be requested when you manually
+                create an anchor or use features that depend on anchor location. Odostrada is not designed to perform
+                continuous background route tracking as part of ordinary use.</p>
+
+            <p class="mb-4"><strong>4. Camera and Photos.</strong> Camera access may be used to capture odometer
+                images. If you choose to import or export images or backup files, the app may also request access to
+                relevant device storage, photos, or files as needed for those user-initiated actions.</p>
+
+            <p class="mb-4"><strong>5. Purchases, Entitlements, and Platform Services.</strong> If you purchase or use
+                paid features, app marketplaces and third-party service providers used for billing, subscription
+                management, entitlement validation, fraud prevention, app distribution, or similar operational purposes
+                may process limited account, device, app-instance, purchase, and transaction-related information under
+                their own terms and privacy policies. We do not use this Privacy Policy to override those third-party
+                terms.</p>
+
+            <p class="mb-4"><strong>6. Diagnostics and Support.</strong> We do not seek to receive your mileage logs,
+                odometer images, or trip history in ordinary app operation. However, if you contact us for support, we
+                may receive and retain the information you choose to provide, such as your name, email address,
+                screenshots, exports, attachments, device details, or diagnostic information you send us.</p>
+
+            <p class="mb-4"><strong>7. How We Use Information We Receive.</strong> To the extent we receive information
+                directly from you or through app marketplace and operational service providers, we may use it to
+                provide customer support, verify purchases or access rights, maintain app functionality, detect abuse or
+                fraud, comply with law, and protect our rights and the security of the app.</p>
+
+            <p class="mb-4"><strong>8. Sharing.</strong> We do not sell your mileage logs or odometer images. We may
+                share limited information when necessary with service providers that help us operate the app or its paid
+                access features, with app marketplaces involved in distribution or billing, in connection with a
+                business transfer, or when disclosure is reasonably necessary to comply with law, enforce our terms, or
+                protect rights, safety, and security.</p>
+
+            <p class="mb-4"><strong>9. Data Retention.</strong> Locally stored app content remains on your device until
+                you delete it, uninstall the app, overwrite it, or remove it through your own device or app actions.
+                Information you send to us directly, or information processed by third-party operational providers, may
+                be retained for as long as reasonably necessary for support, billing, security, legal, or operational
+                purposes.</p>
+
+            <p class="mb-4"><strong>10. Backups, Exports, and User Control.</strong> You control whether to create or
+                share exports and backups. Once you export, back up, transfer, email, upload, or otherwise move data
+                outside the app, its confidentiality and retention may depend on the services, devices, locations, and
+                people you choose to use.</p>
+
+            <p class="mb-4"><strong>11. Children.</strong> Odostrada is intended for adult business use and is not
+                directed to children under 13.</p>
+
+            <p class="mb-4"><strong>12. Changes to This Policy.</strong> We may update this Privacy Policy from time to
+                time. We will update the effective date above when changes are posted. Your continued use of the app
+                after an updated Privacy Policy becomes effective constitutes acceptance of the revised policy to the
+                extent permitted by law.</p>
+
+            <p class="mb-4"><strong>13. Contact.</strong> Privacy questions and requests may be sent to
+                <strong>info@odostrada.com</strong>.
             </p>
-
-            <p class="mb-4"><strong>3. Camera &amp; Image Capture.</strong> Camera access is used for capturing
-                odometer
-                images.
-                The Company does not have access to your camera feed or resulting images; all framing and storage occur
-                locally on your device hardware.</p>
-
-            <p class="mb-4"><strong>4. Pseudonymous Identifiers.</strong> Third-party billing services (including
-                RevenueCat) may assign a random identifier to your device to verify "Pro" status. This identifier does
-                not
-                contain personal identity information (PII) accessible by the Company.</p>
-
-            <p class="mb-4"><strong>5. Data Retention &amp; Deletion.</strong> You control all data. Deleting the app
-                removes
-                all local records. Because the Company does not store your data on servers, we cannot "restore" logs
-                for
-                you
-                if you uninstall the app without a manual backup.</p>
-
-            <p class="mb-4"><strong>6. Children’s Privacy.</strong> The App is a business tool intended for adults. The
-                Company does not knowingly collect or solicit data from children under the age of 16.</p>
 
             <p class="mt-8 pt-6 border-t border-slate-200 text-slate-500 text-xs uppercase italic text-center">
-                Questions: info@odostrada.com
+                Odostrada is operated by Mana Kitchen LLC
             </p>
         </div>
     </section>
 
     <section id="legal" class="py-24 px-6 bg-white border-t border-slate-200">
         <div class="max-w-3xl mx-auto">
-            <p class="section-kicker text-xs font-bold text-emerald-600 mb-3 uppercase tracking-widest">Legal</p>
+            <p class="text-xs font-bold text-emerald-600 mb-3 uppercase tracking-widest">Legal</p>
             <h2 class="text-3xl font-bold mb-8 text-slate-900">End User License Agreement</h2>
 
             <div
                 class="legal-box h-96 overflow-y-auto p-8 glass border border-slate-200 rounded-3xl text-sm text-slate-600 leading-relaxed shadow-sm">
+
                 <p class="mb-6 italic text-slate-800 border-b border-slate-100 pb-4">
-                    This End User License Agreement is a legal agreement between you and <strong>Mana Kitchen
-                        LLC</strong>
-                    (hereafter referred to as <strong>"the Operator"</strong>).
+                    This End User License Agreement (“Agreement”) is a legal agreement between you and
+                    <strong>Mana Kitchen LLC, doing business as Odostrada</strong> (the “Operator,” “Odostrada,” “we,”
+                    “us,” or “our”) governing your access to and use of the Odostrada application, related updates,
+                    content, and features (collectively, the “App”).
                 </p>
 
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">1. Acceptance of Terms</p>
-                <p class="mb-6">By downloading, installing, or using odostrada, you agree to be bound by this
-                    Agreement.
-                    If
-                    you do not agree, do not use the app. The Operator may require renewed acceptance when legal terms
-                    are
-                    updated.</p>
-
-                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">2. Product Scope and Tiers</p>
-                <p class="mb-4"><strong>Standard:</strong> Supports one editable business and one active vehicle, along
-                    with
-                    CSV and image exports.</p>
-                <p class="mb-6"><strong>Business Pro:</strong> Supports expanded business/vehicle counts, full database
-                    backups, and other subscription-gated features as made available by the Operator.</p>
-
-                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">3. Subscriptions &amp; Lifetime Terms
+                <p class="mb-6">
+                    By downloading, installing, accessing, or using the App, you agree to this Agreement. If you do
+                    not agree, do not use the App. If you use the App on behalf of an entity, you represent that you
+                    have authority to bind that entity.
                 </p>
-                <p class="mb-2"><strong>Billing:</strong> Transactions are handled by the applicable app marketplace.
-                    Entitlement handling may rely on third-party services such as RevenueCat. The Operator does not
-                    process
-                    your payment card information directly.</p>
-                <p class="mb-2"><strong>Auto-Renewal:</strong> Subscriptions renew unless canceled at least 24 hours
-                    before
-                    the end of the current period.</p>
-                <p class="mb-2"><strong>Cancellation:</strong> Uninstalling the app DOES NOT cancel a subscription. You
-                    must
-                    manage/cancel via your marketplace account settings.</p>
-                <p class="mb-6"><strong>Lifetime Access:</strong> This tier grants access for the functional lifespan of
-                    the
-                    app as maintained by the Operator on its current distribution platforms.</p>
 
-                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">4. User-Generated Content &amp;
-                    Conduct
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">2. License Grant</p>
+                <p class="mb-6">
+                    Subject to your compliance with this Agreement, we grant you a limited, revocable,
+                    non-exclusive, non-transferable, non-sublicensable license to install and use the App for your own
+                    internal personal or business recordkeeping purposes on devices you own or control, solely as
+                    permitted by this Agreement and the applicable app marketplace rules.
                 </p>
-                <p class="mb-6">You are solely responsible for images captured via the App. You agree not to use the
-                    App
-                    to
-                    capture or store material that is illegal, infringing, or harmful. The Operator does not monitor
-                    local
-                    user content but reserves the right to terminate access for illicit use.</p>
 
-                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">5. No Professional Advice</p>
-                <p class="mb-6">odostrada is a record-keeping tool. The Operator does not provide tax, legal, or
-                    accounting
-                    advice. Always consult a qualified CPA to ensure your logs meet specific audit requirements.</p>
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">3. Ownership and Intellectual Property
+                </p>
+                <p class="mb-6">
+                    The App is licensed, not sold. The App, including its software, design, branding, text, layout,
+                    and all associated intellectual property rights, remains the property of the Operator and its
+                    licensors. Except for the limited license granted above, no rights are granted to you by
+                    implication, estoppel, or otherwise.
+                </p>
 
-                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">6. OCR &amp; Accuracy Disclaimer</p>
-                <p class="mb-6">OCR is provided for convenience. You MUST verify every entry. The Operator is not
-                    responsible for penalties or filing errors arising from unreviewed or inaccurate data.</p>
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">4. Restrictions</p>
+                <p class="mb-6">
+                    You may not, except to the extent prohibited by applicable law, copy, modify, distribute, sell,
+                    lease, sublicense, rent, reverse engineer, decompile, disassemble, create derivative works from,
+                    bypass security or paywall controls, use the App for unlawful purposes, or use the App in a way
+                    that interferes with its operation or the rights of others.
+                </p>
 
-                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">7. Local Data &amp; Backup Risk</p>
-                <p class="mb-6">odostrada is a local-first app. The Operator is NOT liable for data loss due to device
-                    theft, hardware failure, or software corruption. Users are responsible for maintaining their own
-                    external backups.</p>
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">5. Product Scope and Tiers</p>
+                <p class="mb-4">
+                    <strong>Free Tier:</strong> Supports a limited number of businesses, vehicles, and export features
+                    as described in the App or store listing at the time of use.
+                </p>
+                <p class="mb-6">
+                    <strong>Business Pro and Other Paid Tiers:</strong> May provide expanded feature limits, backup
+                    capability, subscription access, lifetime access, or other paid functionality as made available by
+                    the Operator from time to time.
+                </p>
 
-                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">8. Indemnification</p>
-                <p class="mb-6">You agree to indemnify and hold harmless the Operator from any claims or expenses
-                    (including
-                    legal fees) arising from your use of the app, including tax audits or regulatory non-compliance
-                    resulting from data logged within the app.</p>
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">6. Billing, Subscriptions, and
+                    Marketplace Terms</p>
+                <p class="mb-2">
+                    <strong>Billing:</strong> Purchases, subscriptions, renewals, refunds where applicable, and payment
+                    processing are generally handled by the relevant app marketplace or authorized billing provider, not
+                    directly by the Operator.
+                </p>
+                <p class="mb-2">
+                    <strong>Auto-Renewal:</strong> If you purchase an auto-renewing subscription, it renews unless you
+                    cancel through your marketplace account settings before the renewal cutoff specified by that
+                    marketplace.
+                </p>
+                <p class="mb-2">
+                    <strong>Cancellation:</strong> Uninstalling the App does not cancel a subscription.
+                </p>
+                <p class="mb-2">
+                    <strong>Lifetime Access:</strong> If offered, “lifetime” access means access for the functional
+                    lifespan of that offering as maintained by the Operator on then-supported platforms, subject to this
+                    Agreement, app evolution, legal compliance, and platform availability.
+                </p>
+                <p class="mb-6">
+                    <strong>Marketplace Terms:</strong> Your use of the App may also be subject to the terms, rules,
+                    and policies of the app marketplace from which you downloaded it. If there is a conflict between
+                    this Agreement and mandatory marketplace terms, the mandatory marketplace terms control only to the
+                    extent required.
+                </p>
 
-                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">9. Limitation of Liability</p>
-                <p class="mb-6">To the maximum extent permitted by law, the Operator shall not be liable for indirect,
-                    incidental, or consequential damages, including loss of revenue or tax positions, arising from the
-                    use
-                    of the app.</p>
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">7. Your Data, Backups, and
+                    User-Generated Content</p>
+                <p class="mb-6">
+                    You are solely responsible for the data, images, classifications, exports, backups, and other
+                    content you create, store, or share using the App. You are also solely responsible for maintaining
+                    independent backups and protecting exported or backed-up files once they leave the App or your
+                    device. We are not responsible for lost, corrupted, deleted, overwritten, inaccessible, or
+                    misdirected user data.
+                </p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">8. No Tax, Legal, or Accounting Advice
+                </p>
+                <p class="mb-6">
+                    The App is a recordkeeping tool only. The Operator does not provide tax, legal, accounting, audit,
+                    or regulatory advice. Descriptions such as “CPA-ready,” “tax-ready,” or similar refer to formatting
+                    and workflow convenience only and do not guarantee legal sufficiency, tax treatment, audit
+                    acceptance, or compliance with any governmental standard. You are solely responsible for reviewing
+                    entries, retaining required substantiation, and determining whether your records satisfy your own
+                    legal, tax, or business obligations.
+                </p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">9. OCR, Calculations, and Accuracy
+                </p>
+                <p class="mb-6">
+                    OCR, mileage calculations, trip classification tools, and related features are provided for
+                    convenience only. You must review and verify all entries, images, distances, dates, and
+                    classifications before relying on them. The Operator is not responsible for errors, omissions, audit
+                    outcomes, penalties, lost deductions, filing positions, or business decisions arising from
+                    inaccurate, incomplete, or unreviewed information.
+                </p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">10. Changes to the App</p>
+                <p class="mb-6">
+                    We may add, remove, modify, suspend, or discontinue features, tiers, pricing, compatibility,
+                    functionality, or support for all or part of the App at any time, with or without notice, subject
+                    to applicable law and marketplace requirements. Nothing in this Agreement obligates us to continue
+                    any specific feature, tier, or version indefinitely.
+                </p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">11. Suspension and Termination</p>
+                <p class="mb-6">
+                    We may suspend, restrict, or terminate your access to the App or paid features at any time if we
+                    believe you have violated this Agreement, misused the App, engaged in fraud, created security or
+                    legal risk, failed to satisfy payment obligations, or if continued offering of the App becomes
+                    commercially impractical or legally problematic. Upon termination, your license ends immediately,
+                    but sections intended to survive will remain in effect.
+                </p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">12. Disclaimer of Warranties</p>
+                <p class="mb-6">
+                    TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE APP IS PROVIDED “AS IS” AND “AS AVAILABLE,” WITHOUT
+                    WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING ANY IMPLIED WARRANTIES OF
+                    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, ACCURACY, QUIET
+                    ENJOYMENT, AVAILABILITY, SECURITY, OR UNINTERRUPTED OPERATION. WE DO NOT WARRANT THAT THE APP WILL
+                    BE ERROR-FREE, MEET YOUR REQUIREMENTS, PREVENT DATA LOSS, OR SATISFY ANY LEGAL, TAX, OR AUDIT
+                    STANDARD.
+                </p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">13. Limitation of Liability</p>
+                <p class="mb-6">
+                    TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE OPERATOR SHALL NOT BE LIABLE FOR ANY INDIRECT,
+                    INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS,
+                    REVENUE, GOODWILL, DATA, BUSINESS OPPORTUNITY, TAX POSITION, OR EXPECTED SAVINGS, ARISING OUT OF OR
+                    RELATING TO THE APP OR THIS AGREEMENT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. TO THE
+                    MAXIMUM EXTENT PERMITTED BY LAW, THE OPERATOR’S TOTAL AGGREGATE LIABILITY FOR ALL CLAIMS ARISING OUT
+                    OF OR RELATING TO THE APP OR THIS AGREEMENT SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID
+                    TO THE OPERATOR OR THROUGH THE APP MARKETPLACE FOR THE APP IN THE TWELVE (12) MONTHS PRECEDING THE
+                    EVENT GIVING RISE TO THE CLAIM, OR (B) FIFTY U.S. DOLLARS (US $50).
+                </p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">14. Indemnification</p>
+                <p class="mb-6">
+                    You agree to defend, indemnify, and hold harmless the Operator and its owners, managers, members,
+                    employees, contractors, and agents from and against claims, liabilities, damages, losses, and
+                    expenses, including reasonable attorneys’ fees, arising out of or related to your use of the App,
+                    your data or content, your violation of this Agreement, or your violation of law or the rights of
+                    any third party.
+                </p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">15. Governing Law and Venue</p>
+                <p class="mb-6">
+                    This Agreement is governed by the laws of the State of New Hampshire, without regard to conflict of
+                    law rules. To the extent a dispute is permitted to proceed in court, you and the Operator agree to
+                    submit to the exclusive jurisdiction and venue of the state and federal courts located in New
+                    Hampshire, unless applicable law requires otherwise.
+                </p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">16. Changes to This Agreement</p>
+                <p class="mb-6">
+                    We may update this Agreement from time to time. We will update the effective date or post the
+                    revised version within the App, on the App listing, or on our website as appropriate. Your
+                    continued use of the App after the revised Agreement becomes effective constitutes acceptance of the
+                    revised Agreement to the extent permitted by law.
+                </p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">17. General</p>
+                <p class="mb-6">
+                    If any provision of this Agreement is held unenforceable, that provision will be enforced to the
+                    maximum extent permitted and the remaining provisions will remain in full force. Our failure to
+                    enforce any provision is not a waiver. You may not assign this Agreement without our prior written
+                    consent. We may assign this Agreement in connection with a merger, acquisition, reorganization, or
+                    sale of assets. This Agreement constitutes the entire agreement between you and the Operator
+                    regarding the App, except where supplemented by mandatory marketplace terms.
+                </p>
 
                 <p class="mt-8 pt-6 border-t border-slate-200 text-slate-500 text-xs uppercase italic text-center">
                     Questions: info@odostrada.com
@@ -458,7 +590,7 @@
 
     <footer
         class="py-12 text-center text-slate-500 text-[10px] uppercase tracking-[0.2em] border-t border-slate-200 bg-white">
-        <p>&copy; 2026 Mana Kitchen LLC.</p>
+        <p>&copy; 2026 Odostrada. Operated by Mana Kitchen LLC.</p>
         <p class="mt-2 text-teal-600 font-bold tracking-widest">Privacy-First &bull; Local-First &bull; 100% On-Device
         </p>
     </footer>
