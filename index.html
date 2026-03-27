@@ -97,6 +97,16 @@
             transform: translateY(-8px);
             box-shadow: 0 25px 50px -12px rgb(45 212 191 / 0.15);
         }
+
+        .modal-backdrop {
+            background: rgba(15, 23, 42, 0.58);
+            backdrop-filter: blur(8px);
+        }
+
+        .modal-panel {
+            box-shadow: 0 25px 60px -20px rgba(15, 23, 42, 0.35);
+        }
+
     </style>
 </head>
 
@@ -131,11 +141,11 @@
         <div
             class="inline-flex flex-wrap justify-center items-center gap-2 bg-gradient-to-r from-teal-100 to-orange-100 text-teal-700 text-[11px] sm:text-xs font-medium px-4 sm:px-6 py-2 rounded-3xl border border-teal-200 mb-8">
             <div class="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
-            100% ON-DEVICE
+            100% DATA-ON-DEVICE
             <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
             LOCAL-FIRST
             <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
-            NO BACKGROUND TRACKING
+            NO-BACKGROUND-TRACKING
         </div>
 
         <div class="mb-10 px-2 sm:px-4">
@@ -246,19 +256,20 @@
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold tracking-tight mb-3 text-slate-900">Simple Tiers</h2>
                 <p class="text-slate-500">
-                    Start free. Upgrade when you need more businesses, vehicles, or full backup and restore.
+                    Start free. Upgrade when you need more businesses, vehicles, or quicker full backup and restore.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="p-8 rounded-3xl border border-slate-200 bg-white shadow-xl card-hover">
                     <h3 class="text-3xl font-bold mb-2 text-slate-900">Free</h3>
-                    <p class="text-slate-500 mb-8">For one business and basic reporting</p>
+                    <p class="text-slate-500 mb-8">For one business and durable record exports</p>
                     <ul class="space-y-4 text-sm">
                         <li class="flex items-center gap-3 text-teal-600">✓ 1 editable business and 1 active vehicle
                         </li>
                         <li class="flex items-center gap-3 text-teal-600">✓ Odometer photo export as ZIP</li>
                         <li class="flex items-center gap-3 text-teal-600">✓ CSV mileage report export</li>
+                        <li class="flex items-center gap-3 text-teal-600">✓ Preserves core records, without one-tap full restore</li>
                     </ul>
                 </div>
 
@@ -269,7 +280,7 @@
                     </div>
 
                     <h3 class="text-3xl font-bold mb-2 text-slate-900">Business Pro</h3>
-                    <p class="text-slate-500 mb-4">For more businesses or vehicles and full backup capability</p>
+                    <p class="text-slate-500 mb-4">For more businesses or vehicles and faster backup convenience</p>
 
                     <div class="flex flex-wrap gap-2 mb-8">
                         <button
@@ -297,7 +308,7 @@
 
                     <ul class="space-y-4 text-sm">
                         <li class="flex items-center gap-3 text-teal-600">✓ Up to 3 businesses and 3 vehicles</li>
-                        <li class="flex items-center gap-3 text-teal-600">✓ Full backup and restore, including images
+                        <li class="flex items-center gap-3 text-teal-600">✓ Quick full backup and restore, including images
                         </li>
                         <li class="flex items-center gap-3 text-teal-600">✓ CSV mileage report export</li>
                         <li class="flex items-center gap-3 text-teal-600">✓ Backup reminders</li>
@@ -370,9 +381,14 @@
                 purposes.</p>
 
             <p class="mb-4"><strong>10. Backups, Exports, and User Control.</strong> You control whether to create or
-                share exports and backups. Once you export, back up, transfer, email, upload, or otherwise move data
-                outside the app, its confidentiality and retention may depend on the services, devices, locations, and
-                people you choose to use.</p>
+                share exports and backups. Regular CSV and image exports may preserve the underlying record information
+                you choose to keep, but they are not the same as full in-app backup and restore and may require manual
+                merging, file organization, or re-entry. Backup, export, and restore functionality may vary by tier,
+                platform, browser, and device. For browser-based and PWA use, including iPhone web app use, locally
+                stored data may be deleted, cleared, evicted, become inaccessible, or fail to persist due to browser,
+                operating system, device, or storage behavior outside our control. Once you export, back up, transfer,
+                email, upload, or otherwise move data outside the app, its confidentiality and retention may depend on
+                the services, devices, locations, and people you choose to use.</p>
 
             <p class="mb-4"><strong>11. Children.</strong> odostrada is intended for adult business use and is not
                 directed to children under 13.</p>
@@ -420,7 +436,12 @@
 
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">3. Billing and Renewals</p>
                 <p class="mb-6">
-                    Paid purchases may be processed by an authorized payment providers. Subscription plans renew automatically unless canceled before the applicable renewal date. Canceling stops future renewals only and does not retroactively cancel the current billing period.
+                    Paid purchases may be processed by authorized payment providers. Subscription plans renew automatically unless canceled before the applicable renewal date. Canceling stops future renewals only and does not retroactively cancel the current billing period.
+                </p>
+
+                <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">3A. Platform and Storage Limitations</p>
+                <p class="mb-6">
+                    Certain versions of odostrada, including browser-based and Progressive Web App deployments, may rely on local browser or operating-system-managed storage. That local storage may be cleared, evicted, become inaccessible, fail to persist, or be removed due to device settings, browser settings, operating-system behavior, storage pressure, app or web app deletion, software updates, or other platform behavior outside our control. Regular CSV and image exports may preserve underlying record information, but they are not equivalent to full in-app backup and restore and may require manual merging, file organization, or re-entry.
                 </p>
 
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">4. Refunds</p>
@@ -488,7 +509,7 @@
                 </div>
 
                 <p class="mb-6 italic text-slate-800 border-b border-slate-100 pb-4">
-                    This Refund Policy applies to purchases of odostrada products and paid features made through an authorized payment providers.
+                    This Refund Policy applies to purchases of odostrada products and paid features made through authorized payment providers.
                 </p>
 
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">1. Initial Subscription Purchases</p>
@@ -582,7 +603,9 @@
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">5. Product Scope and Tiers</p>
                 <p class="mb-4">
                     <strong>Free Tier:</strong> Supports a limited number of businesses, vehicles, and export features
-                    as described in the App or store listing at the time of use.
+                    as described in the App or store listing at the time of use. Regular CSV and image exports may be
+                    sufficient to preserve underlying record information, but they are not the same as one-step full
+                    backup and restore inside the App.
                 </p>
                 <p class="mb-6">
                     <strong>Business Pro and Other Paid Tiers:</strong> May provide expanded feature limits, backup
@@ -623,8 +646,12 @@
                     You are solely responsible for the data, images, classifications, exports, backups, and other
                     content you create, store, or share using the App. You are also solely responsible for maintaining
                     independent backups and protecting exported or backed-up files once they leave the App or your
-                    device. We are not responsible for lost, corrupted, deleted, overwritten, inaccessible, or
-                    misdirected user data.
+                    device. Regular CSV and image exports may preserve underlying record information, but they are not
+                    equivalent to full in-app backup and restore and may require manual merging, file organization, or
+                    re-entry. For browser-based and PWA versions of the App, including iPhone web app use, locally
+                    stored data may be deleted, cleared, evicted, become inaccessible, or fail to persist due to
+                    browser, operating system, device, or storage behavior outside our control. We are not responsible
+                    for lost, corrupted, deleted, overwritten, inaccessible, or misdirected user data.
                 </p>
 
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">8. No Tax, Legal, or Accounting Advice
@@ -729,6 +756,35 @@
         </div>
     </section>
 
+
+    <div id="iphone-warning" class="fixed inset-0 z-[60] hidden items-center justify-center px-4 sm:px-6" aria-hidden="true">
+        <div class="modal-backdrop absolute inset-0"></div>
+        <div class="modal-panel relative w-full max-w-xl rounded-[2rem] border border-slate-200 bg-white p-8 sm:p-10 text-left">
+            <div class="inline-flex rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-orange-700 mb-5">
+                Important iPhone Notice
+            </div>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-4">iPhone web app use is not recommended</h2>
+            <p class="text-sm leading-relaxed text-slate-600 mb-4">
+                odostrada depends on persistent local storage. On iPhone, Apple’s web app environment can be less reliable and may cause locally stored data to be cleared, lost, or become inaccessible for reasons outside our control.
+            </p>
+            <p class="text-sm leading-relaxed text-slate-600 mb-4">
+                You’re welcome to test odostrada on iPhone. Free includes CSV and photo exports, which can preserve your underlying records if you export regularly, but they do not provide one-step full backup and restore inside the app. If you plan to rely on odostrada more seriously, we strongly recommend Business Pro so you can make frequent quick backups with less manual work.
+            </p>
+            <p class="text-sm leading-relaxed text-slate-600 mb-4">
+                If and when a native iPhone app is released, we intend Business Pro access purchased through the odostrada web app to carry over at no additional odostrada charge, subject to platform rules and our then-current implementation.
+            </p>
+            <p class="text-sm leading-relaxed text-slate-600 mb-8">
+                A native iPhone app is planned for a future release, but release timing may change.
+            </p>
+            <div class="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-end gap-3">
+                <button id="iphone-warning-dismiss" type="button" class="inline-flex items-center justify-center rounded-3xl bg-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600">
+                    I understand
+                </button>
+            </div>
+        </div>
+    </div>
+
+
     <footer
         class="py-12 text-center text-slate-500 text-[10px] uppercase tracking-[0.2em] border-t border-slate-200 bg-white">
         <p>&copy; 2026 odostrada. Operated by Mana Kitchen LLC.</p>
@@ -738,9 +794,44 @@
             <a href="#refund" class="text-teal-600 hover:underline">Refund Policy</a>
             <a href="#legal" class="text-teal-600 hover:underline">EULA</a>
         </div>
-        <p class="mt-3 text-teal-600 font-bold tracking-widest">Privacy-First &bull; Local-First &bull; 100% On-Device
+        <p class="mt-3 text-teal-600 font-bold tracking-widest">Privacy-First &bull; Local-First &bull; 100% On-Device Data
         </p>
     </footer>
+
+    <script>
+        (function () {
+            const modal = document.getElementById('iphone-warning');
+            const dismiss = document.getElementById('iphone-warning-dismiss');
+            if (!modal || !dismiss) return;
+
+            const isIPhone = /iPhone/i.test(navigator.userAgent || '');
+            let dismissed = false;
+            try {
+                dismissed = window.localStorage.getItem('odostrada_iphone_warning_dismissed') === 'true';
+            } catch (e) {
+                dismissed = false;
+            }
+
+            if (isIPhone && !dismissed) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('overflow-hidden');
+            }
+
+            dismiss.addEventListener('click', function () {
+                try {
+                    window.localStorage.setItem('odostrada_iphone_warning_dismissed', 'true');
+                } catch (e) {
+                    // ignore storage failures
+                }
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('overflow-hidden');
+            });
+        })();
+    </script>
 
 </body>
 
