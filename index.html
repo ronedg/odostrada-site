@@ -6,7 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light">
     <meta name="theme-color" content="#fafaf9">
-    <title>odostrada | Privacy-First Mileage Tracking</title>
+    <title>odostrada | Mileage Tracker — No Account, No Background GPS</title>
+    <link rel="canonical" href="https://odostrada.com/">
+    <meta name="description" content="Track business mileage without an account, ever. No GPS running in the background, no ads, no data sold — your logs stay on your device. Snap your odometer, classify trips, export IRS-ready reports. Free to start.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="odostrada — Privacy-First Mileage Tracking">
+    <meta property="og:description" content="Log trips by odometer. No background GPS tracking. No cloud. Your data stays on your device. Free to start.">
+    <meta property="og:image" content="https://odostrada.com/img/hero-logo.jpg">
+    <meta property="og:url" content="https://odostrada.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="odostrada">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="odostrada — Privacy-First Mileage Tracking">
+    <meta name="twitter:description" content="Log trips by odometer. No background GPS tracking. No cloud. Your data stays on your device.">
+    <meta name="twitter:image" content="https://odostrada.com/img/hero-logo.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "odostrada",
+      "url": "https://app.odostrada.com",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Privacy-first mileage tracking app. Log trips using odometer anchors and optional point-in-time GPS. No background route tracking. No cloud storage. Export IRS-ready mileage reports. Your data stays on your device.",
+      "offers": [
+        {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free tier — 1 business, 1 vehicle, CSV and photo exports"
+        },
+        {
+          "@type": "Offer",
+          "price": "4.99",
+          "priceCurrency": "USD",
+          "description": "Business Pro monthly — up to 3 businesses and 3 vehicles, full backup and restore"
+        },
+        {
+          "@type": "Offer",
+          "price": "49.99",
+          "priceCurrency": "USD",
+          "description": "Business Pro annual — 2 months free"
+        },
+        {
+          "@type": "Offer",
+          "price": "129",
+          "priceCurrency": "USD",
+          "description": "Business Pro lifetime access"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mana Kitchen LLC",
+        "url": "https://odostrada.com"
+      }
+    }
+    </script>
+
     <link rel="icon" href="img/odo-logo.jpg" type="image/jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,9 +191,9 @@
                 <a href="#legal" class="hover:text-teal-600 transition text-teal-600">EULA</a>
             </div>
 
-            <a href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_ID"
+            <a href="https://app.odostrada.com"
                 class="hidden md:inline-flex shrink-0 bg-orange-500 text-white px-6 py-2.5 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm text-center leading-tight">
-                Get on Google Play • iOS soon
+                Open Web App • Native Apps Coming
             </a>
         </div>
     </nav>
@@ -141,7 +202,7 @@
         <div
             class="inline-flex flex-wrap justify-center items-center gap-2 bg-gradient-to-r from-teal-100 to-orange-100 text-teal-700 text-[11px] sm:text-xs font-medium px-4 sm:px-6 py-2 rounded-3xl border border-teal-200 mb-8">
             <div class="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
-            100% DATA-ON-DEVICE
+            100% ON-DEVICE-DATA
             <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
             LOCAL-FIRST
             <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
@@ -150,7 +211,7 @@
 
         <div class="mb-10 px-2 sm:px-4">
             <div class="mx-auto max-w-[740px] overflow-hidden rounded-3xl drop-shadow-2xl">
-                <img src="img/odo-logo2-wide.jpg" alt="odostrada" class="w-full h-auto">
+                <img src="img/hero-logo.jpg" alt="odostrada" class="w-full h-auto">
             </div>
         </div>
 
@@ -170,9 +231,9 @@
         </p>
 
         <div class="md:hidden mt-2 mb-4">
-            <a href="https://play.google.com/store/apps/details?id=YOUR_PACKAGE_ID"
+            <a href="https://app.odostrada.com"
                 class="inline-flex items-center justify-center bg-orange-500 text-white px-6 py-3 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">
-                Get on Google Play • iOS soon
+                Open Web App • Native Apps Coming
             </a>
         </div>
     </header>
@@ -182,7 +243,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold tracking-tight mb-3 text-slate-900">How odostrada Works</h2>
                 <p class="text-slate-500 max-w-md mx-auto">
-                    Odometer anchors replace constant GPS tracking. Three steps. Full control.
+                    Odometer anchors replace constant GPS tracking.<br>Three steps. Full control.
                 </p>
             </div>
 
@@ -192,17 +253,13 @@
                         class="mx-auto w-24 h-24 bg-gradient-to-br from-teal-100 via-cyan-100 to-sky-100 border border-teal-200 rounded-[2rem] flex items-center justify-center mb-6 text-teal-700 shadow-md shadow-teal-100/60">
                         <svg viewBox="0 0 24 24" aria-hidden="true" class="w-[58px] h-[58px]" fill="none"
                             stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M12 20.75s5.25-4.95 5.25-9.5A5.25 5.25 0 1 0 6.75 11.25C6.75 15.8 12 20.75 12 20.75z">
-                            </path>
-                            <circle cx="12" cy="11" r="2.1"></circle>
-                            <path d="M18.25 5.25v3.5"></path>
-                            <path d="M16.5 7h3.5"></path>
+                            <path d="M12 21C12 21 5.5 14.5 5.5 9.5a6.5 6.5 0 1 1 13 0C18.5 14.5 12 21 12 21z"></path>
+                            <circle cx="12" cy="9.5" r="2.4"></circle>
                         </svg>
                     </div>
                     <h3 class="font-semibold text-2xl mb-3 text-slate-900">1. Create Anchor</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Enter or photo your odometer reading on arrival. Location is requested only at that moment.
+                        Enter or snap a photo of your odometer reading on arrival. Location is requested only at that moment.
                     </p>
                 </div>
 
@@ -211,12 +268,8 @@
                         class="mx-auto w-24 h-24 bg-gradient-to-br from-orange-100 via-amber-100 to-yellow-100 border border-orange-200 rounded-[2rem] flex items-center justify-center mb-6 text-orange-600 shadow-md shadow-orange-100/60">
                         <svg viewBox="0 0 24 24" aria-hidden="true" class="w-[62px] h-[62px]" fill="none" stroke="currentColor"
                             stroke-linecap="round" stroke-linejoin="round">
-                    
-                            <!-- path -->
                             <path d="M8 6.5v8.2c0 1.1.9 2 2 2h0c1.1 0 2-.9 2-2V9.3c0-1.1.9-2 2-2h0c1.1 0 2 .9 2 2v8.2" stroke-width="1.65">
                             </path>
-                    
-                            <!-- endpoints -->
                             <circle cx="8" cy="6.5" r="1.55" fill="currentColor" stroke="none"></circle>
                             <circle cx="16" cy="17.5" r="1.55" fill="currentColor" stroke="none"></circle>
                         </svg>
@@ -248,6 +301,66 @@
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-stone-50 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-widest">Privacy by Design</p>
+                <h2 class="text-4xl font-bold tracking-tight mb-3 text-slate-900">Built so we can't, not just won't</h2>
+                <p class="text-slate-500 max-w-xl mx-auto">
+                    Most apps ask you to trust their policy. odostrada is built so the data never reaches us in the first place.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass border border-slate-100 rounded-3xl p-7 card-hover">
+                    <div class="text-2xl mb-4">🔒</div>
+                    <h3 class="font-semibold text-lg mb-2 text-slate-900">No account. Ever.</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Free or paid, you never create a login. Nothing to breach, nothing to sell.</p>
+                </div>
+
+                <div class="glass border border-slate-100 rounded-3xl p-7 card-hover">
+                    <div class="text-2xl mb-4">📡</div>
+                    <h3 class="font-semibold text-lg mb-2 text-slate-900">No server logs</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Your trips, odometer readings, and locations never touch our servers. Your payment processor handles billing separately under its own terms — that's the only data that leaves your device.</p>
+                </div>
+
+                <div class="glass border border-slate-100 rounded-3xl p-7 card-hover">
+                    <div class="text-2xl mb-4">📍</div>
+                    <h3 class="font-semibold text-lg mb-2 text-slate-900">No background GPS</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Location is only requested when you create an anchor. No always-on tracking, no battery drain, no movement profile.</p>
+                </div>
+
+                <div class="glass border border-slate-100 rounded-3xl p-7 card-hover">
+                    <div class="text-2xl mb-4">☁️</div>
+                    <h3 class="font-semibold text-lg mb-2 text-slate-900">Your backup, your cloud</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">You can back up to your own Google Drive or iCloud. We never have access to it.</p>
+                </div>
+
+                <div class="glass border border-slate-100 rounded-3xl p-7 card-hover">
+                    <div class="text-2xl mb-4">🚫</div>
+                    <h3 class="font-semibold text-lg mb-2 text-slate-900">No ads. Ever.</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Free or paid, no ads. odostrada doesn't sell your attention.</p>
+                </div>
+
+                <div class="glass border border-slate-100 rounded-3xl p-7 card-hover">
+                    <div class="text-2xl mb-4">👁️</div>
+                    <h3 class="font-semibold text-lg mb-2 text-slate-900">No behavior tracking</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">No analytics SDK, no session recording, no usage telemetry. What you do in the app stays in the app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-white border-t border-slate-100">
+        <div class="max-w-3xl mx-auto text-center">
+            <p class="text-xs font-bold text-orange-500 mb-3 uppercase tracking-widest">Works Smarter</p>
+            <h2 class="text-4xl font-bold tracking-tight mb-5 text-slate-900">"Privacy-first" is not "features-last"</h2>
+            <p class="text-slate-500 text-lg leading-relaxed max-w-2xl mx-auto">
+                odostrada catches likely mistakes before they become bad records, and pre-fills what it already knows so logging stays fast. No AI, no cloud, no surveillance — just a well-designed tool that respects your time.
+            </p>
         </div>
     </section>
 
@@ -284,13 +397,13 @@
 
                     <div class="flex flex-wrap gap-2 mb-8">
                         <button
-                            onclick="this.classList.add('!bg-teal-600','!text-white');this.parentElement.querySelectorAll('button').forEach(b=>b!==this&&b.classList.remove('!bg-teal-600','!text-white'))"
+                            onclick="this.classList.add('!bg-teal-600','!text-white');this.parentElement.querySelectorAll('button').forEach(b=>b!==this&&b.classList.remove('!bg-teal-600','!text-white'));document.getElementById('pricing-cta').classList.remove('opacity-0','pointer-events-none')"
                             class="flex-1 text-xs font-medium px-4 py-2 rounded-2xl border border-teal-200 hover:border-teal-400 transition bg-white">
                             Monthly<br><span class="text-lg font-semibold">$4.99</span>
                         </button>
 
                         <button
-                            onclick="this.classList.add('!bg-teal-600','!text-white');this.parentElement.querySelectorAll('button').forEach(b=>b!==this&&b.classList.remove('!bg-teal-600','!text-white'))"
+                            onclick="this.classList.add('!bg-teal-600','!text-white');this.parentElement.querySelectorAll('button').forEach(b=>b!==this&&b.classList.remove('!bg-teal-600','!text-white'));document.getElementById('pricing-cta').classList.remove('opacity-0','pointer-events-none')"
                             class="flex-1 text-xs font-medium px-4 py-2 rounded-2xl border-2 border-orange-400 bg-orange-50 text-orange-700 relative">
                             Annual<br><span class="text-lg font-semibold">$49.99</span>
                             <span
@@ -300,7 +413,7 @@
                         </button>
 
                         <button
-                            onclick="this.classList.add('!bg-teal-600','!text-white');this.parentElement.querySelectorAll('button').forEach(b=>b!==this&&b.classList.remove('!bg-teal-600','!text-white'))"
+                            onclick="this.classList.add('!bg-teal-600','!text-white');this.parentElement.querySelectorAll('button').forEach(b=>b!==this&&b.classList.remove('!bg-teal-600','!text-white'));document.getElementById('pricing-cta').classList.remove('opacity-0','pointer-events-none')"
                             class="flex-1 text-xs font-medium px-4 py-2 rounded-2xl border border-teal-200 hover:border-teal-400 transition bg-white">
                             Lifetime<br><span class="text-lg font-semibold">$129</span>
                         </button>
@@ -314,6 +427,14 @@
                         <li class="flex items-center gap-3 text-teal-600">✓ Backup reminders</li>
                     </ul>
                 </div>
+            </div>
+
+            <div id="pricing-cta" class="mt-10 text-center opacity-0 pointer-events-none transition-opacity duration-300">
+                <a href="https://app.odostrada.com"
+                    class="inline-flex items-center justify-center bg-orange-500 text-white px-8 py-3.5 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">
+                    Try Free — Upgrade Inside the App
+                </a>
+                <p class="mt-3 text-xs text-slate-400">No account required to get started</p>
             </div>
         </div>
     </section>
@@ -399,7 +520,7 @@
                 extent permitted by law.</p>
 
             <p class="mb-4"><strong>13. Contact.</strong> Privacy questions and requests may be sent to
-                <strong>info@odostrada.com</strong>.
+                <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5930373f3619363d362a2d2b383d38773a3634">[email&#160;protected]</a></strong>.
             </p>
 
             <p class="mt-8 pt-6 border-t border-slate-200 text-slate-500 text-xs uppercase italic text-center">
@@ -486,7 +607,7 @@
 
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">12. Contact</p>
                 <p class="mb-6">
-                    Questions about these Terms and Conditions may be sent to <strong>info@odostrada.com</strong>.
+                    Questions about these Terms and Conditions may be sent to <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a9c0c7cfc6e9c6cdc6dadddbc8cdc887cac6c4">[email&#160;protected]</a></strong>.
                 </p>
 
                 <p class="mt-8 pt-6 border-t border-slate-200 text-slate-500 text-xs uppercase italic text-center">
@@ -534,7 +655,7 @@
 
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">5. How to Request a Refund</p>
                 <p class="mb-6">
-                    To request a refund, contact <strong>info@odostrada.com</strong> and include the purchase email address, purchase date, and relevant transaction details. We may ask for additional information reasonably necessary to verify the request.
+                    To request a refund, contact <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="99f0f7fff6d9f6fdf6eaedebf8fdf8b7faf6f4">[email&#160;protected]</a></strong> and include the purchase email address, purchase date, and relevant transaction details. We may ask for additional information reasonably necessary to verify the request.
                 </p>
 
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">6. Payment Processor Handling</p>
@@ -544,7 +665,7 @@
 
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">7. Contact</p>
                 <p class="mb-6">
-                    Refund questions may be sent to <strong>info@odostrada.com</strong>.
+                    Refund questions may be sent to <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a5cccbc3cae5cac1cad6d1d7c4c1c48bc6cac8">[email&#160;protected]</a></strong>.
                 </p>
 
                 <p class="mt-8 pt-6 border-t border-slate-200 text-slate-500 text-xs uppercase italic text-center">
@@ -750,7 +871,7 @@
                 </p>
 
                 <p class="mt-8 pt-6 border-t border-slate-200 text-slate-500 text-xs uppercase italic text-center">
-                    Questions: info@odostrada.com
+                    Questions: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f49d9a929bb49b909b878086959095da979b99">[email&#160;protected]</a>
                 </p>
             </div>
         </div>
@@ -798,7 +919,7 @@
         </p>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         (function () {
             const modal = document.getElementById('iphone-warning');
             const dismiss = document.getElementById('iphone-warning-dismiss');
@@ -814,25 +935,4 @@
 
             if (isIPhone && !dismissed) {
                 modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                modal.setAttribute('aria-hidden', 'false');
-                document.body.classList.add('overflow-hidden');
-            }
-
-            dismiss.addEventListener('click', function () {
-                try {
-                    window.localStorage.setItem('odostrada_iphone_warning_dismissed', 'true');
-                } catch (e) {
-                    // ignore storage failures
-                }
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                modal.setAttribute('aria-hidden', 'true');
-                document.body.classList.remove('overflow-hidden');
-            });
-        })();
-    </script>
-
-</body>
-
-</html>
+                modal.cla
