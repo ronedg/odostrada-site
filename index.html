@@ -68,8 +68,98 @@
     }
     </script>
 
-    <link rel="icon" href="/favicon.ico" sizes="32x32">
-    <link rel="icon" href="/img/favicon-192.png" type="image/png" sizes="192x192">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does odostrada track mileage without background GPS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "odostrada uses odometer anchors instead of continuous route tracking. You record an odometer reading when you arrive, and the next reading calculates the exact miles traveled between those two anchors. Location can be requested at that moment to help label the anchor, but the app is not designed to build an all-day movement history in the background."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens on the first reading for a vehicle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The first odometer reading for any vehicle becomes that vehicle's starting anchor. It does not create a trip by itself. The next reading on that same vehicle creates the first trip segment from the prior anchor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are location tags and purpose tags handled the same way?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Location tags are shared across the app, which is useful if more than one vehicle visits the same places. Purpose tags are business-specific, because the reasons you drive for one business may not make sense for another. The app can still suggest the most relevant locations per vehicle and the most-used purposes per business."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to take a photo or enable GPS every time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Photos and point-in-time location are optional tools, not hard requirements for the core mileage log. You can enter odometer readings manually, and you can create or choose location tags without GPS if needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does odostrada save time without spying on me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "odostrada gives you the shortcuts people actually want, without the surveillance they do not. It can suggest likely vehicles, locations, odometer readings, and business purposes using the records already on your device, including your own prior anchors, nearby saved places, and most-used tags. So logging gets faster and smarter, without background tracking, without server-side trip storage, and without an account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between exports and full backups?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CSV and photo exports preserve the basics, but they do not restore the app state. Full backup and restore is the explicit app-level way to protect against device loss, move to a new device, or keep a stable backup in cloud or local storage you control. Unless you rely on a full phone backup, which is not the same thing and is not something odostrada can explicitly verify or restore from inside the app, exports alone should not be treated as a complete recovery plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is iPhone Safari the same as using odostrada from the Home Screen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not always. On iPhone, opening the site in Safari and launching it from Add to Home Screen can behave like different app contexts, especially around storage persistence and browser UI. For the best iPhone web experience, we recommend opening odostrada in Safari and then using Share to Add to Home Screen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are native iPhone and Android apps coming?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Native iPhone and Android apps are planned for a future release. Timing may change, but that is the direction. If you purchase a paid odostrada tier on the web, we intend for that paid access to transfer to the native apps at no additional odostrada charge, subject to platform rules and the final implementation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does odostrada store my mileage data on your servers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. odostrada does not store your trip data on our servers and does not have access to your mileage log. Your records stay on your device unless you choose to export or back them up somewhere you control, such as your own local storage or cloud storage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is Business Pro for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Business Pro is best for people who need more than one business or more than one vehicle, or who want faster full backup and restore workflows. The free tier is enough to try the system and preserve records through exports, but Business Pro makes serious day-to-day use much more convenient."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/img/favicon-96x96.png" type="image/png" sizes="96x96">
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" sizes="180x180">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -189,6 +279,7 @@
             <div class="hidden md:flex gap-8 text-sm font-medium text-slate-500">
                 <a href="#how" class="hover:text-teal-600 transition">How it Works</a>
                 <a href="#pricing" class="hover:text-teal-600 transition">Pricing</a>
+                <a href="#faq" class="hover:text-teal-600 transition">FAQ</a>
                 <a href="#privacy" class="hover:text-teal-600 transition">Privacy</a>
                 <a href="#terms" class="hover:text-teal-600 transition">Terms</a>
                 <a href="#refund" class="hover:text-teal-600 transition">Refunds</a>
@@ -455,6 +546,128 @@
                     Try Free — Upgrade Inside the App
                 </a>
                 <p class="mt-3 text-xs text-slate-400">No account needed — ever</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 px-6 bg-stone-50 border-t border-slate-100">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-14">
+                <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-widest">FAQ</p>
+                <h2 class="text-4xl font-bold tracking-tight mb-4 text-slate-900">Practical Answers Before You Commit</h2>
+                <p class="text-slate-500 text-lg leading-relaxed max-w-2xl mx-auto">
+                    odostrada works a little differently from route-tracking mileage apps. That is intentional. These are the questions most people need answered before they decide whether the workflow fits their business.
+                </p>
+            </div>
+
+            <div class="grid gap-5 md:grid-cols-2">
+                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-teal-100/40">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">How does odostrada track mileage without background GPS?</span>
+                        <span class="mt-1 text-teal-600 transition group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">
+                        odostrada uses odometer anchors instead of all-day route logging. You record a reading when you arrive, and the next reading calculates the exact miles traveled between those two points. Location can be requested at that moment to help identify where the anchor happened, but the app is not designed to build a continuous movement trail in the background.
+                    </p>
+                </details>
+
+                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-orange-100/40">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">What happens on the first reading for a vehicle?</span>
+                        <span class="mt-1 text-orange-500 transition group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">
+                        The first reading for any vehicle becomes that vehicle's starting anchor. It does not create a trip by itself, because there is nothing before it to measure against. The next reading on that same vehicle creates the first trip segment. This is especially important if you use more than one vehicle, because each vehicle keeps its own odometer chain.
+                    </p>
+                </details>
+
+                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-teal-100/40">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">Are location tags and purpose tags handled the same way?</span>
+                        <span class="mt-1 text-teal-600 transition group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">
+                        No. Location tags are shared across the app, which makes sense if multiple vehicles visit the same places. Purpose tags are business-specific, because the reasons you drive for one business do not always belong in another. The app can still rank suggestions intelligently, showing more relevant locations per vehicle and more relevant purposes per business.
+                    </p>
+                </details>
+
+                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-orange-100/40">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">Do I need to take a photo or enable GPS every time?</span>
+                        <span class="mt-1 text-orange-500 transition group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">
+                        No. Photos and point-in-time GPS are optional tools, not hard requirements for the core log. You can type odometer readings manually, and you can choose or create location tags without GPS. The point of the app is to help you create clean records with as little friction as possible, not force a single workflow.
+                    </p>
+                </details>
+
+                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-teal-100/40">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">How does odostrada save time without spying on me?</span>
+                        <span class="mt-1 text-teal-600 transition group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">
+                        odostrada gives you the shortcuts people actually want, without the surveillance they do not. It can suggest likely vehicles, locations, odometer readings, and business purposes using the records already on your device, including your own prior anchors, nearby saved places, and most-used tags. So logging gets faster and smarter, without background tracking, without server-side trip storage, and without an account.
+                    </p>
+                </details>
+
+                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-teal-100/40">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">What is the difference between exports and full backups?</span>
+                        <span class="mt-1 text-teal-600 transition group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">
+                        CSV and photo exports preserve the basics, but they do not restore the app state. Full backup and restore is the explicit app-level way to protect against device loss, move to a new device, or keep a stable backup in cloud or local storage you control. Unless you rely on a full phone backup, which is not the same thing and is not something odostrada can explicitly verify or restore from inside the app, exports alone should not be treated as a complete recovery plan.
+                    </p>
+                </details>
+
+                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-orange-100/40">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">Is iPhone Safari the same as using odostrada from the Home Screen?</span>
+                        <span class="mt-1 text-orange-500 transition group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">
+                        Not always. On iPhone, a normal Safari tab and a Home Screen launch can behave like different app contexts, especially around storage persistence and browser UI. If you want the best iPhone web experience, open odostrada in Safari first and then use Share to Add to Home Screen.
+                    </p>
+                </details>
+
+                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-teal-100/40">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">Are native iPhone and Android apps coming?</span>
+                        <span class="mt-1 text-teal-600 transition group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">
+                        Yes. Native iPhone and Android apps are planned for a future release. Timing may change, but that is the direction. If you purchase a paid odostrada tier on the web, we intend for that paid access to transfer to the native apps at no additional odostrada charge, subject to platform rules and the final implementation.
+                    </p>
+                </details>
+
+                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-teal-100/40">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">Does odostrada store my trip data on your servers?</span>
+                        <span class="mt-1 text-teal-600 transition group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">
+                        No. odostrada does not store your trip data on our servers and does not have access to your mileage log. Your records stay on your device unless you choose to export or back them up somewhere you control, such as your own local storage or your own cloud storage.
+                    </p>
+                </details>
+
+                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-orange-100/40">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">Who should use Business Pro instead of staying free?</span>
+                        <span class="mt-1 text-orange-500 transition group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">
+                        Business Pro is for people who need more than one business, more than one vehicle, or a much smoother backup and restore workflow. The free tier is enough to test the system and keep exports of your underlying records. Business Pro is what makes the app practical for more serious daily use with less manual overhead.
+                    </p>
+                </details>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-sm text-slate-500 mb-5">Still deciding whether the workflow fits your business?</p>
+                <a href="https://app.odostrada.com"
+                    class="inline-flex items-center justify-center bg-orange-500 text-white px-8 py-3.5 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">
+                    Try odostrada Free
+                </a>
             </div>
         </div>
     </section>
@@ -930,6 +1143,7 @@
         class="py-12 text-center text-slate-500 text-[10px] uppercase tracking-[0.2em] border-t border-slate-200 bg-white">
         <p>&copy; 2026 odostrada. Operated by Mana Kitchen LLC.</p>
         <div class="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[10px] font-semibold tracking-[0.18em]">
+            <a href="#faq" class="text-teal-600 hover:underline">FAQ</a>
             <a href="#privacy" class="text-teal-600 hover:underline">Privacy Policy</a>
             <a href="#terms" class="text-teal-600 hover:underline">Terms and Conditions</a>
             <a href="#refund" class="text-teal-600 hover:underline">Refund Policy</a>
