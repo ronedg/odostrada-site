@@ -91,14 +91,6 @@
         },
         {
           "@type": "Question",
-          "name": "Are location tags and purpose tags handled the same way?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Location tags are shared across the app, which is useful if more than one vehicle visits the same places. Purpose tags are business-specific, because the reasons you drive for one business may not make sense for another. The app can still suggest the most relevant locations per vehicle and the most-used purposes per business."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Do I need to take a photo or enable GPS every time?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -119,6 +111,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "odostrada gives you the shortcuts people actually want, without the surveillance they do not. It can suggest likely vehicles, locations, odometer readings, and business purposes using the records already on your device, including your own prior anchors, nearby saved places, and most-used tags. So logging gets faster and smarter, without background tracking, without server-side trip storage, and without an account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I miss a trip or need to fix one later?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can edit a trip later, including its category and location tags. If one recorded segment really covered more than one purpose or should be broken apart, odostrada also lets you split the trip so the mileage can be assigned more accurately instead of forcing one label onto the whole distance."
           }
         },
         {
@@ -159,6 +159,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Business Pro is best for people who need more than one business or more than one vehicle, or who want faster full backup and restore workflows. The free tier is enough to try the system and preserve records through exports, but Business Pro makes serious day-to-day use much more convenient."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do location tags and trip purpose tags work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Location tags are reusable places, so the same saved location can be used across vehicles. Trip purpose tags are business-specific, because the reasons you drive for one business may not make sense for another. odostrada can still suggest the most relevant locations per vehicle and the most-used purposes per business."
           }
         }
       ]
@@ -644,16 +652,6 @@
                     </p>
                 </details>
 
-                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-teal-100/40">
-                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
-                        <span class="text-lg font-semibold tracking-tight text-slate-900">Are location tags and purpose tags handled the same way?</span>
-                        <span class="mt-1 text-teal-600 transition group-open:rotate-45">+</span>
-                    </summary>
-                    <p class="mt-4 text-sm leading-7 text-slate-600">
-                        No. Location tags are shared across the app, which makes sense if multiple vehicles visit the same places. Purpose tags are business-specific, because the reasons you drive for one business do not always belong in another. The app can still rank suggestions intelligently, showing more relevant locations per vehicle and more relevant purposes per business.
-                    </p>
-                </details>
-
                 <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-orange-100/40">
                     <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
                         <span class="text-lg font-semibold tracking-tight text-slate-900">Do I need to take a photo or enable GPS every time?</span>
@@ -681,6 +679,16 @@
                     </summary>
                     <p class="mt-4 text-sm leading-7 text-slate-600">
                         odostrada gives you the shortcuts people actually want, without the surveillance they do not. It can suggest likely vehicles, locations, odometer readings, and business purposes using the records already on your device, including your own prior anchors, nearby saved places, and most-used tags. So logging gets faster and smarter, without background tracking, without server-side trip storage, and without an account.
+                    </p>
+                </details>
+
+                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-orange-100/40">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">What if I miss a trip or need to fix one later?</span>
+                        <span class="mt-1 text-orange-500 transition group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">
+                        You can edit a trip later, including its category and location tags. If one recorded segment really covered more than one purpose or should be broken apart, odostrada also lets you split the trip so the mileage can be assigned more accurately instead of forcing one label onto the whole distance.
                     </p>
                 </details>
 
@@ -731,6 +739,16 @@
                     </summary>
                     <p class="mt-4 text-sm leading-7 text-slate-600">
                         Business Pro is for people who need more than one business, more than one vehicle, or a much smoother backup and restore workflow. The free tier is enough to test the system and keep exports of your underlying records. Business Pro is what makes the app practical for more serious daily use with less manual overhead.
+                    </p>
+                </details>
+
+                <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-teal-100/40">
+                    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">How do location tags and trip purpose tags work?</span>
+                        <span class="mt-1 text-teal-600 transition group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm leading-7 text-slate-600">
+                        Location tags are reusable places, so the same saved location can be used across vehicles. Trip purpose tags are business-specific, because the reasons you drive for one business do not always make sense for another. odostrada can still suggest the most relevant locations per vehicle and the most-used purposes per business.
                     </p>
                 </details>
             </div>
