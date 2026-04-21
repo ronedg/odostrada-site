@@ -139,10 +139,10 @@
         },
         {
           "@type": "Question",
-          "name": "Are native iPhone and Android apps coming?",
+          "name": "What should Android and iPhone users use today?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Native iPhone and Android apps are planned for a future release. Timing may change, but that is the direction. If you purchase a paid odostrada tier on the web, we intend for that paid access to transfer to the native apps at no additional odostrada charge, subject to platform rules and the final implementation."
+            "text": "Android users can install odostrada from Google Play. iPhone users should use the odostrada web app in Safari and then use Share to Add to Home Screen if they want the best available iPhone workflow today. A native iPhone app is still planned for a future release, and timing may change."
           }
         },
         {
@@ -302,9 +302,9 @@
                 <a href="#legal" class="hover:text-teal-600 transition text-teal-600">EULA</a>
             </div>
 
-            <a href="https://app.odostrada.com"
+            <a href="https://play.google.com/store/apps/details?id=com.odostrada.app"
                 class="hidden md:inline-flex shrink-0 bg-orange-500 text-white px-6 py-2.5 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm text-center leading-tight">
-                Try odostrada - no account - no card
+                Get it on Google Play
             </a>
         </div>
     </nav>
@@ -340,11 +340,18 @@
             Snap your odometer. Instantly see exact trip distances. Classify business or personal use. Export organized trip reports built for self-employed tax deductions. All local. No accounts required.
         </p>
 
-        <div class="md:hidden mt-2 mb-4">
-            <a href="https://app.odostrada.com"
-                class="inline-flex items-center justify-center bg-orange-500 text-white px-6 py-3 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">
-                Try odostrada Free
-            </a>
+        <div class="mt-2 mb-4">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://play.google.com/store/apps/details?id=com.odostrada.app"
+                    class="inline-flex items-center justify-center bg-orange-500 text-white px-6 py-3 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">
+                    Android: Get it on Google Play
+                </a>
+                <a href="https://app.odostrada.com"
+                    class="inline-flex items-center justify-center border border-slate-300 text-slate-700 px-6 py-3 rounded-3xl text-sm font-semibold hover:border-teal-500 hover:text-teal-700 transition">
+                    iPhone: Use the Web App
+                </a>
+            </div>
+            <p class="mt-3 text-xs text-slate-500">Android now has a native Google Play app. iPhone users should open odostrada in Safari for the best available setup.</p>
         </div>
     </header>
 
@@ -418,7 +425,7 @@
         <div class="max-w-5xl mx-auto">
             <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-center">
                 <div>
-                    <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-widest">See It Live</p>
+                    <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-widest">See the Workflow</p>
                     <h2 class="text-4xl font-bold tracking-tight mb-5 text-slate-900">Simple trip capture</h2>
                     <p class="text-slate-600 text-lg leading-relaxed mb-5">
                         Open the app, capture the odometer, verify the trip, and move on.
@@ -612,11 +619,17 @@
             </div>
 
             <div id="pricing-cta" class="mt-10 text-center opacity-0 pointer-events-none transition-opacity duration-300">
-                <a href="https://app.odostrada.com"
-                    class="inline-flex items-center justify-center bg-orange-500 text-white px-8 py-3.5 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">
-                    Try Free — Upgrade Inside the App
-                </a>
-                <p class="mt-3 text-xs text-slate-400">No account needed — ever</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://play.google.com/store/apps/details?id=com.odostrada.app"
+                        class="inline-flex items-center justify-center bg-orange-500 text-white px-8 py-3.5 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">
+                        Android: Get it on Google Play
+                    </a>
+                    <a href="https://app.odostrada.com"
+                        class="inline-flex items-center justify-center border border-slate-300 text-slate-700 px-8 py-3.5 rounded-3xl text-sm font-semibold hover:border-teal-500 hover:text-teal-700 transition">
+                        iPhone: Use the Web App
+                    </a>
+                </div>
+                <p class="mt-3 text-xs text-slate-400">Android app live on Google Play. No account needed either way.</p>
             </div>
         </div>
     </section>
@@ -714,11 +727,11 @@
 
                 <details class="glass rounded-3xl border border-slate-200 p-6 group open:shadow-lg open:shadow-teal-100/40">
                     <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-left">
-                        <span class="text-lg font-semibold tracking-tight text-slate-900">Are native iPhone and Android apps coming?</span>
+                        <span class="text-lg font-semibold tracking-tight text-slate-900">What should Android and iPhone users use today?</span>
                         <span class="mt-1 text-teal-600 transition group-open:rotate-45">+</span>
                     </summary>
                     <p class="mt-4 text-sm leading-7 text-slate-600">
-                        Yes. Native iPhone and Android apps are planned for a future release. Timing may change, but that is the direction. If you purchase a paid odostrada tier on the web, we intend for that paid access to transfer to the native apps at no additional odostrada charge, subject to platform rules and the final implementation.
+                        Android users can install odostrada from Google Play today. iPhone users should use the odostrada web app in Safari and then use Share to Add to Home Screen if they want the best available iPhone workflow today. A native iPhone app is still planned for a future release, and timing may change.
                     </p>
                 </details>
 
@@ -755,10 +768,16 @@
 
             <div class="mt-12 text-center">
                 <p class="text-sm text-slate-500 mb-5">Still deciding whether the workflow fits your business?</p>
-                <a href="https://app.odostrada.com"
-                    class="inline-flex items-center justify-center bg-orange-500 text-white px-8 py-3.5 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">
-                    Try odostrada Free
-                </a>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://play.google.com/store/apps/details?id=com.odostrada.app"
+                        class="inline-flex items-center justify-center bg-orange-500 text-white px-8 py-3.5 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">
+                        Android: Get it on Google Play
+                    </a>
+                    <a href="https://app.odostrada.com"
+                        class="inline-flex items-center justify-center border border-slate-300 text-slate-700 px-8 py-3.5 rounded-3xl text-sm font-semibold hover:border-teal-500 hover:text-teal-700 transition">
+                        iPhone: Use the Web App
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -787,7 +806,7 @@
                 <a href="/iphone-mileage-tracker-without-background-gps.html" class="glass rounded-3xl p-7 block hover:-translate-y-1 transition">
                     <p class="text-xs font-bold uppercase tracking-widest text-teal-600 mb-3">iPhone</p>
                     <h3 class="font-semibold text-xl mb-3 text-slate-900">iPhone mileage tracker without background GPS</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">A simpler iPhone workflow, plus the honest limits of web storage and why Home Screen install matters.</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">Why iPhone users should use Safari and Add to Home Screen for the best available setup today.</p>
                 </a>
             </div>
         </div>
@@ -984,7 +1003,7 @@
                 </div>
 
                 <p class="mb-6 italic text-slate-800 border-b border-slate-100 pb-4">
-                    This Refund Policy applies to purchases of odostrada products and paid features made through authorized payment providers. Refund handling may depend on where you purchased odostrada, including direct web checkout providers and, if offered in the future, app marketplace billing providers such as the Apple App Store or Google Play.
+                    This Refund Policy applies to purchases of odostrada products and paid features made through authorized payment providers. Refund handling may depend on where you purchased odostrada, including direct web checkout providers, Google Play, and, if offered in the future, app marketplace billing providers such as the Apple App Store.
                 </p>
 
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">1. Initial Subscription Purchases</p>
@@ -1009,7 +1028,7 @@
 
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">5. How to Request a Refund</p>
                 <p class="mb-6">
-                    For purchases made directly through an odostrada-authorized web checkout provider, contact <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="99f0f7fff6d9f6fdf6eaedebf8fdf8b7faf6f4">[email&#160;protected]</a></strong> and include the purchase email address, purchase date, and relevant transaction details. We may ask for additional information reasonably necessary to verify the request. If odostrada is offered through the Apple App Store or Google Play in the future, refunds for purchases made through those marketplaces may be subject to the applicable marketplace refund process and policies instead of direct handling by us.
+                    For purchases made directly through an odostrada-authorized web checkout provider, contact <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="99f0f7fff6d9f6fdf6eaedebf8fdf8b7faf6f4">[email&#160;protected]</a></strong> and include the purchase email address, purchase date, and relevant transaction details. We may ask for additional information reasonably necessary to verify the request. For purchases made through Google Play, refunds may be subject to the applicable Google Play refund process and policies instead of direct handling by us. If odostrada is offered through the Apple App Store in the future, refunds for purchases made there may be subject to the applicable marketplace refund process and policies instead of direct handling by us.
                 </p>
 
                 <p class="mb-4 font-bold text-slate-700 uppercase tracking-wide">6. Payment Processor Handling</p>
