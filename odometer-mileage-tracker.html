@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#fafaf9">
+    <title>Odometer Mileage Tracker | odostrada</title>
+    <link rel="canonical" href="https://odostrada.com/odometer-mileage-tracker.html">
+    <meta name="description" content="Need an odometer mileage tracker? odostrada calculates trip distance from odometer anchors instead of relying on all-day background GPS tracking.">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/img/favicon-96x96.png" type="image/png" sizes="96x96">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" sizes="180x180">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        html { color-scheme: light; -webkit-text-size-adjust: 100%; background: #fafaf9 !important; }
+        body { font-family: 'Inter', sans-serif; background: #fafaf9 !important; color: #0f172a !important; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(16px); border: 1px solid rgba(15,23,42,0.08); }
+        .hero-title { color: #0f172a; }
+        @supports (-webkit-background-clip: text) {
+            .hero-title.gradient-safe { background: linear-gradient(135deg, #0f172a 0%, #0f766e 55%, #ea580c 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-slate-900 selection:bg-teal-500/30">
+    <nav class="fixed w-full z-50 border-b border-slate-200 bg-white/95 backdrop-blur-lg shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+            <a href="https://odostrada.com" class="flex items-center gap-3 min-w-0">
+                <img src="img/odo-logo.jpg" alt="odostrada" class="w-10 h-10 rounded-2xl object-contain shadow-sm">
+                <span class="text-2xl font-bold tracking-tighter text-teal-600 whitespace-nowrap">odostrada</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.odostrada.app" class="hidden md:inline-flex shrink-0 bg-orange-500 text-white px-6 py-2.5 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">Get it on Google Play</a>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-6">
+        <section class="max-w-4xl mx-auto mb-10">
+            <div class="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm text-slate-500 mb-4">
+                <a href="https://odostrada.com/" class="hover:text-teal-700 transition">Home</a>
+                <span aria-hidden="true">/</span>
+                <span class="text-slate-700">Guides</span>
+                <span aria-hidden="true">/</span>
+                <span class="text-slate-900 font-medium">Odometer Mileage Tracker</span>
+            </div>
+            <div class="text-center">
+                <div class="inline-flex items-center rounded-full border border-slate-300 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 mb-4">Guide</div>
+                <p class="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto">This page explains the core odometer-based model behind odostrada. <a href="https://odostrada.com/" class="text-teal-700 font-semibold hover:underline">See the main site for the full overview.</a></p>
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto text-center mb-16">
+            <p class="text-xs font-bold text-teal-600 mb-3 uppercase tracking-widest">Odometer Workflow</p>
+            <h1 class="hero-title gradient-safe text-5xl sm:text-6xl font-extrabold tracking-tighter mb-6 leading-[1.06]">An Odometer Mileage Tracker</h1>
+            <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
+                odostrada is built for people who prefer mileage records tied to real odometer readings instead of constant route surveillance.
+            </p>
+        </section>
+
+        <section class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 mb-16">
+            <div class="glass rounded-3xl p-8">
+                <h2 class="text-2xl font-bold mb-4 text-slate-900">The core model</h2>
+                <p class="text-slate-600 leading-8 mb-4">Your first reading becomes the starting anchor for a vehicle. The next reading on that same vehicle creates the next anchor and calculates the trip distance between the two.</p>
+                <p class="text-slate-600 leading-8">That is why the workflow feels different from a GPS tracker. The odometer is the backbone of the record.</p>
+            </div>
+            <div class="glass rounded-3xl p-8">
+                <h2 class="text-2xl font-bold mb-4 text-slate-900">Why some users trust it more</h2>
+                <p class="text-slate-600 leading-8 mb-4">Odometer-based logging can feel easier to review later because every segment is tied to a reading you entered or captured, not an invisible route trace that ran behind the scenes.</p>
+                <p class="text-slate-600 leading-8">For users who care about deliberate recordkeeping, that makes the log feel more intentional and easier to defend.</p>
+            </div>
+        </section>
+
+        <section class="max-w-5xl mx-auto glass rounded-[2rem] p-8 sm:p-10 mb-16">
+            <h2 class="text-3xl font-bold tracking-tight mb-5 text-slate-900">More than a simple odometer log</h2>
+            <p class="text-slate-600 leading-8 mb-4">odostrada combines odometer capture with business-purpose tags, location tags, trip edits, trip splitting, CSV export, and fuller backup options. The point is not just to save readings. It is to turn them into structured business records.</p>
+            <p class="text-slate-600 leading-8">That makes it useful for self-employed drivers who need a mileage log in miles or kilometers without giving up control of their own data.</p>
+        </section>
+
+        <section class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold tracking-tight mb-4 text-slate-900">Mileage records built around the odometer</h2>
+            <p class="text-slate-500 text-lg mb-8">Capture the reading. Verify the trip. Keep the record clean.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://play.google.com/store/apps/details?id=com.odostrada.app" class="inline-flex items-center justify-center bg-orange-500 text-white px-8 py-3.5 rounded-3xl text-sm font-semibold hover:bg-orange-600 transition shadow-sm">Android: Get it on Google Play</a>
+                <a href="https://app.odostrada.com" class="inline-flex items-center justify-center border border-slate-300 text-slate-700 px-8 py-3.5 rounded-3xl text-sm font-semibold hover:border-teal-500 hover:text-teal-700 transition">iPhone: Use the Web App</a>
+                <a href="https://odostrada.com/" class="inline-flex items-center justify-center border border-slate-300 text-slate-700 px-8 py-3.5 rounded-3xl text-sm font-semibold hover:border-teal-500 hover:text-teal-700 transition">Back to main site</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
